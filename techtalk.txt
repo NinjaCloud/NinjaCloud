@@ -1,0 +1,1529 @@
+13th Mar_Recording- Containers and Kubernetes Foundation Session_Part-1 
+
+ 
+0:02 
+1718 my job completely shifted into containerization and container orchestration. So I'm certified on all this areas. From 2020 onwards I am exclusively working for HP. I can say this might be the 150 batch that I'm delivering to you at this moment. I have trained that much batches on this particular technology including Container Foundation and CICD foundation. 
+
+ 
+0:30 
+So once we learn this particular paper where we talk about what is Docker container runtime and Kubernetes orchestrator, we'll also understand that to implement an end to end automation you need certain tools like infrastructure as a code tools, something like Red Hat and Sybil, Heschikoptera form Git version control system, Jenkins kind of CI, continuous integration systems etc. So I do deliver consulting and training on all this. 
+
+ 
+0:58 
+DevOps related automation topics. Before I started working completely for SBA, I was closely incorporated with Accenture, Microsoft, Infosys kind of companies. So that's a brief about me. I'm not taking too much of time as I was mentioning as a program itself is named as comprehensive Industry hands on program. We need to have certain expectations from the participants before we get started. 
+
+ 
+1:26 
+The first expectation is that you should have a working Amazon Web Services account. As you know, Amazon Web Service is a public cloud platform, right? So basically we can run servers from Amazon and we can install whatever we want. Ideally, we are going to understand the capabilities of a cloud platform using AWS. Although it is a public cloud platform, it becomes very easy for you to map this with your solutions like. 
+
+ 
+1:56 
+HP Green Lake, once you start implementing solutions in AWS, because it's just a tick tock, right. So we have seen what is there in AWS now it's very easy for you to understand what is a metal as a service container as a service in Green Lake. We have limitations in providing Green Lake environment for everyone and commonly we agreed that we will do the trainings on public cloud because even if you or your customers using Green Lake. 
+
+ 
+2:25 
+There will be a counterpart of public cloud, so it's it's going to give you an understanding of AWS as well. If you haven't explored this before now there will be a course material given to you from testscript.cloud.com. This is our official content sharing platform and there will be two documents in that particular. 
+
+ 
+2:50 
+Link that you have received for the post material. One of the document talks about a prerequisite document which helps you understand how to create AWS account. So let me walk you through how you will be able to see the documents. Let me share that screen so once you follow the instructions that you have. 
+
+ 
+3:16 
+Got to redeem the license key for testscript.cloud.com. If you haven't received, please let us know in the chat. We'll be happy to share the user guide for you. There will be a PDF document in which the steps for redeeming the material will be given. Then you will see there are a certain forum where we can discuss. Then there is a small evaluation for you. This evaluation will be conducted after the training and there are two documents that you need to follow for this particular training. 
+
+ 
+3:46 
+And their voice. The sessions will be recorded, so if you have some important meetings or you know appointments, then it's OK to skip. Although it's not recommended. But let's say you have an emergency, you have to skip for one hour, then you will see the recordings of the previous day training in the training recording session. So you can always watch it. But as topics are really having a continuity problem, we recommend that maximum your participation is encouraged. 
+
+ 
+4:14 
+Here you will see HP Cihd AWS training prerequisite. If you open this. This document talks you about what should be your laptop configuration or what all things needs to be there in the laptop. Then there is a step step by step guide to create a Amazon Web Service account. So it's pretty simple. You need to go to aws.amazon.com and provide you a personal e-mail ID preferably & up for an account. 
+
+ 
+4:45 
+It is going to ask you regarding your credit card information. You don't have to worry too much. Most of this trainings or hands on exercises are contacted in Amazon free tier, AWS free tier, free tier in the sense you get 750 hours of a particular instance for free. It's called a T2 micro instance. It's a virtual machine that we can take from AWS. So most of our exercises will be in free tier. 
+
+ 
+5:13 
+And also if some bill is getting generated also we will help you how to contact Amazon support and wipe that charge for it. So initially when you provide your card information, they're going to deduct maybe $1.00 from your credit card, but immediately that will be returned to your account, it will be reimbursed. It's just to check whether the credit card is valid or not. 
+
+ 
+5:35 
+And a bill will be generated. That's how the public clouds will work. It's a pay per use model. If you are using it too much then you need to pay. In that case we will help you how to request for a credit. Once you select a support, make sure that you are taking the basic support which is free and do not go for something which is having a recurring monthly cost. 
+
+ 
+6:02 
+So if you have any questions, you know this the lab instructor here, you can work with him, he will be able to help you. You can share your screen and solve your doubts and create your own account. So it's the first document that you need to follow. The reason why I'm telling to create an AWS account. So people always ask me can we perform this docker exercises in our laptop itself? It can be installed docker in our laptop or kubernet is in our laptop. And practice yes it is possible. 
+
+ 
+6:31 
+It's going to create a confusion. There is no consistency among participants and you are not going to get an experience which is production level right here. You will see once you install this kind of softwares, you are running a web server and it's readily available in the Internet. So that kind of facilities we want to introduce and going to the next level program which is on April, definitely you need a AWS account because the training itself is about controlling AWS using infrastructure as a code. 
+
+ 
+7:01 
+With tools like Hashicopteraform and Simplex. So I highly recommend you to create an AWS account and start practicing on that. We're already familiar with this tools. You might also know that this can be done in laptop as well If you have virtualization platforms like Oracle VirtualBox or VMware Workstation, definitely this can be replicated into your laptop as well. 
+
+ 
+7:29 
+So I'll put a break here. Any questions till this point? Do you have any confusions? All of you have received this particular link, This particular course. Yes, Yes, Yes, Yes. I didn't get a key. No, I didn't get a link. No key. Okay. 
+
+ 
+7:59 
+Yes Okay Chandan are you there in this meeting? Yes I will. On the yes can you send a reply on that particular e-mail okay so the I can paste the key here. This is from March 13 to so I I will also try to give it from my end. If it's not working then only you need to take. 
+
+ 
+8:27 
+This is the link will have a user guide given to you. You need to sign up for test prepared 1st and this is the key user guide March download. 
+
+ 
+9:25 
+OK, can I attach this file here? Nina, can you try to attach this file in the chat, maybe by uploading it somewhere? Yeah, sure that is yes. I will just show you this kind of a document will be given to you and the subject line in your outlook will be course details, materials and assessments. 
+
+ 
+9:58 
+So please search for the subject, hopefully it's shared with everyone. Once you open that e-mail you will get something like this where the link to go to this particular training. So this is previous batch and your batch. The next batch will be on 24th to 27th April. That will be for the DevOps training. 
+
+ 
+10:29 
+So here you have the key and also there is a user guide for containers right? So this this particular document is what I'm talking about. It just says that you need to go & up for a particular link. So I have opened here. So predominantly you need to go to this particular link. Let me show it in a Incognito window. 
+
+ 
+11:03 
+& up. So while signing up you need to use your official e-mail id which is HP e-mail id so it will give it to you Sign up link. You get this documents in the e-mail itself. I'm just helping you if you are not able to find that provide a username, password, required details. Once you are done with that you can click on the link that I have given previously which is the first link. 
+
+ 
+11:38 
+Then it will take you to this particular course. It will ask for enrollment key and the enrollment key for this training is given in the chat. That's correct. So just need to copy that key. Now you will get this particular page. Is it clear now? Do I need to explain it one more time? 
+
+ 
+12:15 
+Anyone has any confusion? It's Monday, I'm in confusion. No, no, I seem to be doing all right. I'm just it looks like I'm getting the message that says that ohh Amazon services are not may take up to 24 hours to fully activate. OK, OK, I will tell you what to do. 
+
+ 
+12:40 
+Yes. So when you follow this particular instruction and finish the steps then there is a chance that Amazon will tell you that you are requesting for a free tier account and the services will only get enabled you know after some time. So now how you will handle that situation right? So if you go here you will see an option called support. 
+
+ 
+13:06 
+So maybe if you are getting that warning message then there will be a option to contact support in the bottom of the page right? Directly there is a option to try to contact support or else if you are getting this screen you can search for support. Once you have logged into your account then go to the support so it will not take 24 hours. First of all it will get activated immediately but you need to contact support and request for activation. 
+
+ 
+13:37 
+Once you go to support maybe to the link that is given in the warning page itself or if you are able to get this particular search box, you can just search support and create a case. This is account and billing case right? So where what we need is account related and categories activation OK? 
+
+ 
+14:05 
+So this is what you need to do. Let me take a snapshot and give it to you. Just search for support, create a case and this should be the category of the case. Once that is done, additional information you have a subject you need to write that I'm attending a training. It's very important for me. Can you please activate it? As I am I'm going to explore AWS so some subject line. 
+
+ 
+14:50 
+With little bit sentiments you can write there. Once that is done you will get a contact us option. Preferably you can go with phone if you're getting that option in your region or maybe with chat. So if something wrong with your credit card Oregon something they they will let you know Most cases it's just that they want to verify the credit card with bank that is going to take approximately 24 hours if you request them. 
+
+ 
+15:21 
+Then they will send a RTP and make sure that it's you and they will just activate it immediately. Is that clear? Go back where was the created? Where was the created ticket? I missed that part. OK, so if you are getting an error page while logging to AWS saying that this may take 24 hours for activation. 
+
+ 
+15:48 
+And that page, in the bottom of the page itself you will see Contact support option. OK, OK. If you are not able to see that and you have this search box with you, then just search for support. You've already got an AWS account so I don't have to. Yes that is fine. If you already have an account that is perfectly fine. So this is the option. 
+
+ 
+16:14 
+That you need to contact support. This will be useful if you incurred some bill or something. You can also wipe out the bills using this option. Ideally we will not exceed $1.00 or $2.00 in this training, but that's it. Once you have the support option and you have a create case option, this is the next. Don't worry if you are still. 
+
+ 
+16:43 
+Facing difficulty we'll be able to help you with that. Those are some prerequisite that we need to take care before we go to the actual training Okay. So create this is hey it it just took a while. Mys is actually working now. Yes I didn't. That's what I I didn't have to create it. Yes, yes, mostly it will get ready. If you just log out and log in again it will be ready. 
+
+ 
+17:12 
+Guess that bank verification will get pending sometime, that's the only thing that is going to okay, fantastic. Now how the training is going to flow, right. So as we discussed this is hands on training, there is very little bit cheery which are very essential to understand that ideally we'll not be talking about a lot of slides here. 
+
+ 
+17:37 
+So if you open the second link which is Containers and Kubernetes Foundation, this is your course material. So comprehensive hands on training on Containers and Kubernetes Foundation. Now you will see a lot of PowerPoint slides are given here. We're just talking about what will be our agenda for day one right then a lot of pictures explaining what is containers, what are the difference between hypervisors and containers or container run times. Then you will see the lapse. 
+
+ 
+18:06 
+So what we have decided with HP leadership is that we will not be using PowerPoint slides. The slides are already given to you. Instead, we will be drawing the concept on a Microsoft whiteboard. So quickly we will explain why we are doing a particular exercise using a Microsoft whiteboard and directly jump into the demonstration of the labs. So you'll see the first lab is to launch a particular. 
+
+ 
+18:31 
+Amazon Virtual machine which is Elastic Compute Cloud machine, EC2 machine and installing docker on that. So the material itself is very comprehensive where you can follow it by yourself. You just need to follow the instruction what would need to be done. But the instructor here in this case Ninad will be demonstrating the exercise to you. He'll be showing it first and then you need to a time for you to finish the lab will be given. 
+
+ 
+19:00 
+And you will follow all the commands given and he will explain what his command is doing from the scratch. So likewise, that's the first lap. If you see there are around 14 laps that we need to complete within this four day training, right? So most of the time will be dedicated to laps. So my role here will be to explain you the theory that you need to keep in mind before you enter to the lab. So ideally I for the first day I come for two hours, second day come for three hours. 
+
+ 
+19:29 
+Then eventually by 4th day I'll be covering most of the topic. As the topic get complicated like Kubernetes, maybe I'll be covering a lot of theory. But for the first day at least, this is more important for you to get a hands on. You need to get your hands dirty by playing with these containers and create some doubts. So the next day start with a recap of what we have covered yesterday. So today you'll be just creating account. 
+
+ 
+19:59 
+Creating virtual machine, installing Docker, playing with a lot of docker containers and docker commands you'll have a lot of doubts. So the first one tomorrow we'll be discussing all your doubts by again drawing the concept and how exactly it is running and stuff like that. So today our we are not going to complicate things by talking about a lot of big theory behind the scene, but just practicing basic docker life cycle commands and understanding why this technology is being used. 
+
+ 
+20:30 
+That takes it to another confusion. So if you see those labs, it's predominantly Linux based labs, right. Although container technology can be used in Windows, this labs are predominantly based on Linux. So now we need to have a expectation setting that all of you are little bit familiar about Linux. So we are going to do that with the help of a survey. 
+
+ 
+20:58 
+It's called the Mentee meter survey. This perfectly fine. We expect a mixed audience. Maybe people are not from Linux or Unix background, they're from Windows background. That's completely fine as it is a foundational course. So this server is going to ask you 2 questions. Are you from Linux background already? Are we expert in Linux Or you have played a little bit with Linux? You're a intermediate, you haven't even seen a Linux terminal before. 
+
+ 
+21:26 
+It's all the three options are fine so you don't have to worry about it in which level you are. So if we have more beginners and we will be also explaining all the Linux command what exactly that commands means. Usually we don't get that particular confusion in the services batch, so maybe increase sales and all we face that difficulty that people are purely from Windows background. The second question is asking about are you already working on containers and docker? 
+
+ 
+21:55 
+So the reason to ask this question is that so that we can reduce the time that we spend on the basics of containers. If you are already working on that so here also you can mark it as you're an expert intermediate beginner. So we if we have beginners as the majority then we will be talking too much basics how exactly this evolved and why we need to use this particular technology. Similarly during the Cuban at the session also we'll have similar service. 
+
+ 
+22:23 
+Anyway that we need to start from scratch itself, but Linux and Docker, I think a lot of people will be already familiar. So to participate in this survey, I'm going to give you a link in the chat. You can just click on this link, it will open the survey in your web browser and we can see the real time result here itself. So please participate in the survey, you'll be getting the first question now. 
+
+ 
+22:50 
+So here you you don't have to worry too much about, you know, advanced Linux. It's just asking have you used a, have you used commands like CD, mkdr, you know, VI editor, nano editor? Are you familiar with the Linux command line? That's the question. We have experts, we have lot of people in intermediate category. 
+
+ 
+23:25 
+OK, seems like we don't have much issue with Linux. OK, so it's OK if you are a beginner. You can always interrupt the trainer if you are not understanding. Maybe it's me or Nina. Please interrupt us or others can also help you some questions. If there is a confusion, we put it into parking lot and. 
+
+ 
+24:04 
+Answer it the next day. But if you're not understanding, please don't be silent. Please ask what that means and we'll be able to help you with the answer, right. So yeah, I think we have major words now. So this is it. So Linux wise, we don't have to go through a lot of basics. Now if you refresh your browser, you will see the second question. 
+
+ 
+24:29 
+So are you already familiar with container technology and docker container? What No I don't. You just need to refresh your browser where the server is open so you get the second question. So the link is given in the chat. You can reopen the link also. Now you will see the second question. 
+
+ 
+25:02 
+OK, yes, so seems like here we have more beginners. So that means this five people may have to you know compromise little bit has most of people having explored this technology. So we'll be doing a from scratch delivery, we will be talking too much about the basics. 
+
+ 
+25:28 
+So ideally we we take one and half days for this particular container technology topics, but I think with this kind of audience it may extend up to two days right where we talk about what are containers, what what was the need for inventing something like containers, what yes, sorry any doubt was asking that. 
+
+ 
+25:59 
+Am I clearly audible? Yes, you are. Yes, Sir, you are. Yes. Yes. OK, great. Thank you. So we'll be talking about how the container is getting IP addressing, how to mount a special storage to the container, how to build your own container images, so. 
+
+ 
+26:19 
+We can say the first two days we'll be focusing too much on containers, then we will go to something like container orchestration because that's little bit advanced topic. The foundation of container should be pretty strong before we enter to something like Kubernetes. So request for this five people, please share your knowledge, but you may have to refresh the basic concepts again. OK, great. Thank you for participating in the survey. 
+
+ 
+26:47 
+Now let's go to our slide again. So we have finished all the expectations. We have given you the prerequisite document how to create an AWS account. You have received the course material what needs to be followed for the laps and so we're from nd.com. We get a clear expectation that people are new to this technology, so we need to do it from scratch delivery. Now another important thing, the break timing, so the time is based on EST is stand time. 
+
+ 
+27:15 
+So we're starting at 9:30. Ideally within one and half hour you get the first coffee break. That will be for, you know, 15 minutes, right? Then we continue the session till 1:00 PM. Then you get one hour lunch break. So 1:00 PM to 2:00 PM You are going to have the lunch break. If you are not in Eastern Time, please calculate it accordingly. 
+
+ 
+27:41 
+1:00 PM Eastern Time to 2:00 PM Eastern Time is where our one hour lunch break. Then we continue for one and half hour. Again we will get 15 minutes coffee break and we end up at end the session at 5:30 PM. So if the instructor is somehow not following this, please send a reminder in the chat. 
+
+ 
+28:01 
+That you can plan your meetings accordingly. Sometimes these topics are a little bit tricky. Maybe we are in the middle of a cluster creation or something, so little bit extension can be done. Ideally this should be the time. So definitely the first one and half every day is covered by me. It will be the theory sessions. Eventually I will increase my time to till lunch break. So today I'm not going to take too much theory. Maybe it's better to do some hands on today and create some doubts. 
+
+ 
+28:30 
+And we will solve that confusions tomorrow in the recap session. So what we are going to cover for the first two days, what are the objectives today? I'm going to start with a whiteboard learning session on what is app modernization and what is there in the modern day data centers, right. So we'll talk about the evolution of data centers from the bare metals to virtualization to cloud computing to containers and serverless. 
+
+ 
+29:00 
+Again, telling this might be boring for you because you are working in that, you are experts in that, but it's just a quick refresher to connect you with what exactly? What's the need of implementing something like containers, right? So it's a golden circle why, what and how the containers came into picture. Then we will talk about different solutions used to create containers, something like Docker or Red Hat, Pot Man container de cryo kind of run times. 
+
+ 
+29:30 
+Then I will hand over the session to NINAD. He will introduce you to a popular container runtime called Docker. So he will also be doing little bit whiteboarding. He will he will be more focusing on the hands on exercise part of it. Tomorrow we will come back and discuss the theory behind this. So today we'll be talking these two topics in my session. After that I'll be handing over NINAD for particularly for the hands on exercise lab number 1-2 and three. 
+
+ 
+30:00 
+Okay. So having said that, I'm going to share my Microsoft whiteboard. Any questions before we get started with the actual session? Is it clear? Yes, Okay. Great. So this is how a Microsoft whiteboard looks like. It's just like a classroom training. I'll be writing and drawing the concepts. 
+
+ 
+30:27 
+And maybe based on a scenario and you can ask or interrupt me if you are getting confused, right. So as we are approaching a new technology, it's very important to understand why this is important for us to learn what exactly it is doing when compared to the previous technology and how exactly we can set it up. So this is what I'm going to cover. 
+
+ 
+30:55 
+It's actually pretty interesting about this particular container technology that will not be able to map a lot of things from the previous infrastructure models. But it's very important to understand this technology. As you see if you follow the blocks from HPE regarding Green Lake and Compute OPS Manager everywhere you will see machine learning. You will see that behind the scene. 
+
+ 
+31:24 
+They're mostly using containers instead of virtual machine. So if you remember the old age, we were using predominantly mainframes, then the physical servers, right? Suddenly one fine day the virtualization came into picture. No one expected that it's going to get migrated into virtual machines in that heavy pace, right? But today you can see that it's mostly virtual machines that we are doing very rarely. We do bare metal installation if and only if there is a use case for that. Otherwise we have a layer of. 
+
+ 
+31:54 
+Hypervisors and virtual machine just like that right now in the industry there is a trend that is going on like even if you are using a bare metal or virtual machines you need to deploy your applications with containers and orchestrated with something like container orchestrators. So we'll part the idea of orchestration for the day three where we we have to talk about. 
+
+ 
+32:20 
+What was the need of container orchestration? Today we are just going to do a pretty simple comparison on what happened from bare metal to containers and eventually how it is going to create a model called Serverless Compute. OK, so let's start explaining that with an example. So let's suppose we are in the late 90s or early 2000, early mid area. 
+
+ 
+32:49 
+One customer is approaching us, so it's it's not 2023, it's maybe it's 2003, 2004 kind of. One customer is approaching you and he want to design it at a Center for his application. So the customer is only going to create a development environment, you don't want a production environment. As of now, he's planning to launch a software, he need to purchase some servers and create a development environment. 
+
+ 
+33:18 
+So we'll start gathering the requirement, what kind of applications that you are looking for and what kind of operating systems that needs to be installed on top of the service, right. So the customer is telling, you know I have certain Linux based applications, so let's assume that customer is asking for a web server, Apache web server and a database which is so popular in the Linux world called MySQL. 
+
+ 
+33:47 
+So this is a friend and application. It's a web server and MySQL is a DB server. So you have this exercise in your docker file lab. That's why I'm taking this example. So that's similar is approaching us. He need to run an application, he need to create a dev environment in his on premise data center and it's based on Linux operating system. 
+
+ 
+34:16 
+That has two application, so front end is Apache web server and the back end is MySQL database. So we'll ask, OK is this the only application that you are going to use or do you need something additional to this? So he's telling maybe for identity and access management I will also need a windows based application, so for example DFCP, DNS, Active Directory. 
+
+ 
+34:43 
+I would prefer Windows operating system. That's little bit easy to configure, right? Server edition 2003 or NT whatever was available. So to handle the identity and access management, I may go with Windows operating system. Then we will propose a cord. You know this much as it's going to cost. So he's requesting, yeah I I know that you can give me better solutions but I would like to prefer very less capital expenditure. 
+
+ 
+35:12 
+I don't want to invest too much because it's still in development phase. I don't have a return on investment here. So I just need to start working. My developers needs to start working on this. Can you give me a court with very less capital expenditure? Now you are the data center engineer here. What is the bare minimum number of servers that we can propose to this customer? So this guy is customer. How many servers? Remember there is no virtualization, it's 2000. 
+
+ 
+35:43 
+How many servers we need to suggest to this customer? Or or no bare minimum, how much servers? 222 servers, right? So what is the reason that we need to propose to OS the OS exactly? So a bare metal server is completely dependent on the OS. 
+
+ 
+36:12 
+That is installed on it, so I need to propose 2 servers. So maybe for the Linux one I will take a rack server and give some high end configuration. I have a SAS here, then maybe for course of CPU and then physical RAM, physical NICs and physical HTT we have. 
+
+ 
+36:41 
+Given as the directly attached, maybe running an Active Directory is not a very big deal, at least in the dev environment. We'll propose a tower server with lesser capacity. That's fine, we we want him to get started and only we'll have that. So we have server 2. This needs to be dedicated for Windows now. What are the installation methods that we used? So how exactly let's say? 
+
+ 
+37:06 
+We are recommending the customer that it's better to go with there at Hat Enterprise Linux on top of the server so that you will get little bit you know support and other stuff when you move to production. It will be very useful for you. So let's start developing on top of Red Hat here and here it is Server 2003 or something like that or 2008 Portal. So how are you going to install that operating system on top of the server? 
+
+ 
+37:34 
+Again, I am telling this is very basic, it's not our topic, but I'm going somewhere with it. I'm I'm going to show you how containers solve certain challenges, right? So what if you want to install that had Enterprise Linux on top of this server? What are the steps that you need to take? From which file you need to start? And I I saw yes exactly. So we'll go to the vendor. 
+
+ 
+38:02 
+Download the ISO file. Right now we have multiple options. If you remember that time we had the CD DVD drives right here itself. Then maybe we can burn it to a DVD and keep it here. Before DVD we had to write it into multiple CDs and insert CDs one by one, right. Then later when the USB boot came into picture it it was very easy. We can burn it into a. 
+
+ 
+38:30 
+Bootable USB or flash drive and boot it from there. So that scratch problem with DVD will not happen. Now it's pretty fast when compared to a DVD installation. And if it's OK if you have a network with good bandwidth, maybe 100 Mbps, 1 Gbps at that time, then you can also go with Preboot execution environment. You can also install it from the network itself. 
+
+ 
+38:55 
+These are the three options that we majorly use whether regardless whether it is a Linux operating system, Windows operating system, either of these methods needs to be used right so we can see the challenges there. If you just power on this bare metal, it's going to do all the pause kind of stuff. First the fans will calibrate, then comes all the power on self test and finally maybe after 2-3 minutes you are getting the UEFI or BIOS. 
+
+ 
+39:22 
+Then you are selecting a boot source, it's installing. A lot of efforts needs to be done anyway. Finally we will get an installation. There is no doubt on that. So we will do all the configurations. This mostly command line based. So you have it at HAT Enterprise Linux which is a Enterprise Linux. Then we know that Linux systems are predominantly based on Linux kernel, right? So whether it is Red Hat Enterprise Linux? 
+
+ 
+39:51 
+So say enterprise Linux, Ubuntu, Linux. Everything will use a kernel software which is given by Linux towards which is actually doing the hardware abstraction. Here it's it's actually talking to your underlying hardware with the drivers and utility service step right? The front end, the graphical user interface, the package management meant everything is done by Red Hat. But underlying it's a Linux operating system, so the kernel is the Linux one. 
+
+ 
+40:20 
+Microsoft on the other hand is a EC game. You had graphics, beautiful graphics and things were so smooth. So you have a Windows Server here, and this kernel is developed by Windows itself. This has a Windows kernel. It's not using a Linux kernel or Unix kernel. So now we have our servers dedicated for operating system. 
+
+ 
+40:46 
+We cannot dual boot. I mean we cannot run 2 operating systems at same time on top of a server. Maybe we can dual boot by partitioning the disk and all, but it's not recommended in a server environment. Right now for reducing my capital expenditure, I have only recommended one server for the development. That means I need to install these two applications on top of the Linux box. What are the application, the web server and the database? 
+
+ 
+41:13 
+So what I will do is I will install the Apache web server here, right? Or maybe as the back end application, I'll start with MySQL database first, I will install my database daemon, right? So if you try to install something on Linux, you will see it's not pretty straightforward. As Microsoft, you need to have a lot of dependencies installed on top of the underlying operating system. So we can say that it's the libs and binaries, right? So there is. 
+
+ 
+41:43 
+Package managers like em em package manager or app package manager in Linux which which actually tells you if you want to install MySQL then you have this much dependencies, this much other libraries needs to be installed on this operating system. They creates A dependency tree and finally installs your application so that anyway will be taken care by the package manager. So what I'm telling is if you want to install MySQL a lot of libraries and binaries are going to get installed. 
+
+ 
+42:11 
+For the MySQL to function, similarly for Apache, you also have a lot of libraries and binaries underneath Apache to support that application. So everything got installed on one single server. As it said development environment. It's perfectly fine now that we can expose this Apache on the IP address of the Nic and the developers are testing it and once they establish a connection to database. 
+
+ 
+42:40 
+It's taking data from the MySQL and the development is in progress. Similarly in Microsoft at that time people loved Microsoft because you just need to go to the server manager, configure DNS, DHCP, ADTS. It's pretty straightforward. OK, so anyway, this is a bare minimal solution that we can give for that customer if you are using the bare metal solution, right So now. 
+
+ 
+43:10 
+The customer want to expand, he want to, you know create a test environment as well and eventually move to production. Maybe he want to release a beta version of the application. So we can do a lot of things. We can create virtual host in that passion and separate it into different port numbers and stuff like that. But by that time there was a beautiful technology came into picture. 
+
+ 
+43:38 
+So we call this kind of a design as physical servers or bare metal servers, physical machines, right. It's physical. We can, we can actually take it. By the time of 2005, 2006, we had another technology in place which will help us reduce our capital expenditure. That's called the virtual machines. Again, don't get bored. I'm going somewhere with this. 
+
+ 
+44:09 
+Now what is the speciality of virtual machines and how it is helping me to create multiple environments? So we have this particular server. The main challenge with the physical machine model is that once you install an operating system on top of the server then you are tightly bound to that operating system. So let's say I don't have major work for this Windows if I want to. 
+
+ 
+44:35 
+Install a Linux and test my my Apache, MySQL application. Then I need to wipe out this entire hard disk, reinstall the Linux operating system and configure it again. So install, configure, manage. That effort is there. In case of virtual machine that challenge is not there. OK, so you have the servers with you, but you will not directly install an operating system on top of it. 
+
+ 
+45:05 
+You have server one and server 2. Previously we were installing operating system directly. Can you tell me what we will install instead of an operating system here? A hypervisor? Hypervisor. Yes exactly. So we will install a customized operating system called as. The hypervisor hypervisor act as. 
+
+ 
+45:33 
+And hardware abstraction layer, What is the hardware abstraction there? If you see here, the Linux kernel along with the drivers and utilities were abstracting the hardware, right? So you have the controller here, then you need the driver for that. For different components you need that particular drivers and only that particular system is going to work. 
+
+ 
+46:04 
+Here the hypervisor also includes a small kernel as if you are familiar with it, it has something or as a VM kernel right that has the drivers to abstract the complete underlying physical hardware. And this physical hardware is not used to run applications directly, but it is used to create a virtual hardware. So what are the main resources that here we have in the physical system so we have physical CPU cards? 
+
+ 
+46:34 
+We have physical RAM, then physical Nic cards, network interface cards and physical hard disk, right? So this hardware abstraction layer abstracts this, connects to this underlying physical hardware and present it says virtual hardware. Something like you know, we CPUs virtual RAM. 
+
+ 
+47:04 
+So you may be thinking why I'm going with this kind of basics, It's containerization is just a next level of virtualization. That's where we are starting from here, virtual network interface cards and virtual disks, right? So let's say you had a four core CPU here. 
+
+ 
+47:21 
+With Intel HTVT kind of hyperthreading virtualization enabled then you can approximately create around 8V CPUs from that physical right by controlling your threads. So you have a RAM of eight gig underlying you can actually maybe with certain techniques you can use more than 8GB of virtual ram. With V swap and memory ballooning a lot of techniques are there. 
+
+ 
+47:48 
+If you have a dual core Gigabit Nic with your server then in that case maybe you can break it into four different vnix etc right. You have a big array of disk here which is of 1DB then you can break it into multiple small virtual disk maybe of 50 GB, 100 GB etc. Okay. So that's the idea of hypervisor. 
+
+ 
+48:15 
+Now what exactly this hypervisor is letting us do? So when we boot the server, we are just booting it for one time and the hypervisor is getting loaded. So on top of the virtual hardware we can reserve some area for our operating system. That area is known as the virtual server or we call it as the virtual machine, right? 
+
+ 
+48:41 
+The virtual machine has a particular configuration file which tells how much CPU, how much memory you want to allocate. So let's say here I am telling I would like to have you know 4 Vcps for this particular virtual machine with eight gig of RAM and 50 gig of vdisk HDD and one V Nic. 
+
+ 
+49:06 
+So this is the V unique that I'm telling now I have reserved 1 area on this particular hardware. Similarly, I can reserve another area now that I don't have a dependency on the underlying hardware to install an operating system because my operating system is going to get installed inside the virtual hardware. That means on top of the same server itself I can install a Linux box. 
+
+ 
+49:33 
+So where we have rgl and the Linux kernel. This is important right? And maybe if I want I can install Windows here so I don't have a dependency on operating system on top of the server right? I can install whatever I want. But if you want to properly test your application which we were using in this case, we need to follow something called as multi tier architectural design right? So here. 
+
+ 
+50:02 
+Initially while in the development phase we were installing the back end application and front end application on the same server. This has multiple problems right? If you want to do a version upgrade on MySQL then if some libraries is being shared by Apache and MySQL then you are forced to upgrade. So actually the opposite happens. Apache is a front end application, this will get exposed to Internet right? Right. So you need periodic patching for this application. 
+
+ 
+50:32 
+You need to make sure that it's packed securely right? So you need periodic upgrades for this application. While you are trying to upgrade this application, it's going to upgrade some libraries on the underlying operating system. That libraries will be used by MySQL. So this creates A dependency conflict. Now only solution to solve that is you need to upgrade MySQL also which is not recommended. In certain cases we will go with a latest table edition. 
+
+ 
+51:02 
+OK, still you will see in certain cases we are still using a batch version of MySQL 5.7, not MySQL 8, something like that, right? So it's it's a little bit tricky to upgrade this kind of softwares, not like a front end application. Another problem is that if an attacker attacks the front end application, so you are in Internet and this application somehow got compromised. 
+
+ 
+51:26 
+It's going to give you complete control to the underlying operating system in which the back end application is also running. So your mission critical data is the chances of it is getting compromised is very high because you are in the same process space. Your friend end and back end is running inside the same process space. So process isolation, dependency resolution, this kind of problems are there if you run this. 
+
+ 
+51:55 
+Random and back end together inside 1 operating system. So ideally we follow something or less multi tier design to avoid that kind of solve problems. So to start with we'll start with A2 tier design so we create a virtual machine. It can be a physical machine also right? So we install Apache in one machine. So let's say I'm going to not going to pay for a license here I'm I can take a Ubuntu Linux. 
+
+ 
+52:24 
+Which is coming with the Linux kernel and I have all the libraries and binaries of Apache running here and it has its own Nic. Now what I can do is I will take another machine with better capacity. Here I am installing MySQL with all its dependencies and libraries. Then I'm going with Red Hat Enterprise Linux here. Now for a test environment I'm exposing this to Internet. 
+
+ 
+52:54 
+Right, and a request is coming here. Then it is talking to the other virtual machine. Here I can have a firewall. So now it solves 2 issues. If I upgrade my Apache version, there is no dependency on upgrading MySQL. If my Apache is getting compromised, I have better control in passing that traffic to MySQL because it's going through the network, not through the same IPC. 
+
+ 
+53:23 
+Is this 2 concepts clear to you? Yes yes, yes, yes, yes, yes yeah yeah Thank you. So people ask me this is possible with physical machine? Also why we need to use virtual machine? The problem with physical machine is that if you want to run 2 operating systems you need to purchase 2 servers. That is increasing the capital expedition. But if you use virtual machine, you are simulating. 
+
+ 
+53:54 
+That environment, VM1 and VM2, understood because you only have one server, initially both programs were running on top of same operating system. You just logically break it into two virtual servers and they're assuming that they are two different machines itself. OK, So I don't have a capital expenditure increase there. 
+
+ 
+54:19 
+Now another advantage of breaking this into this fashion, we will see in the container orchestration that if you want to scale your application still we haven't reached into production, I will talk the production story in day three. So in production you will have multiple machines serving the same application, right? You have a load balancer which is taking the traffic and you have Apache VM here, then another VM of Apache. 
+
+ 
+54:46 
+Then again another we can add it as send when needed. Then everyone is reporting to a cluster of database, maybe one single instance of MySQL or maybe a lot of read only replicas and stuff like this story. We will talk when we talk about orchestration but eventually this is the design that we need to implement into prod to implement this kind of a design. 
+
+ 
+55:10 
+So this is the test environment, it's a prod environment. To implement this kind of a design, it's better to use virtual machines because you have more control on resource utilization as and when you need. You can turn off some applications, turn off some virtual machines and launch some other virtual machines promote something or less infrastructure reusability. So a lot of advantages are there if you are using a hypervisor layer on top of your server, right? So what I discussed so far is. 
+
+ 
+55:40 
+If I want process isolation, so that's one of the advantage here, process isolation. So what I will do? I will not keep 2 softwares together inside one virtual machine as part of the best practice. For example, MySQL will be installed on one single machine with all its libraries and binaries. And let's say my friend then I'm using another operating system. I also have a kernel here, right? And. 
+
+ 
+56:08 
+A web server is application here and upgrading the life cycle of this application is not dependent on the other one. Another thing is MRU, maximum resource utilization, resource utilization. So even if we use this kind of a method right most of the time. 
+
+ 
+56:36 
+We will not be even consuming around 40 percentage of CPU memory resources. But we cannot do anything for that. So let's say I want to create a test environment. It's very hard for me to create that isolated environment on top of a normal Linux operating system. It's possible but it's little bit complicated to do that. There is a chance that developers may miss it. Like let's say I'm running only two virtual machines here, I'm only consuming 40 percentage of CPU, memory resources here. 
+
+ 
+57:06 
+Then it's OK, I can launch my windows also on top of this, right? I can launch my windows, I can launch another development environment. So I can make sure that 100 percentage of utilization on that particular hardware, because that's that's my return on investment, right? I have paid for the server. I need to make sure that I am using each and every bit of CPU cycles and memory pages at any point of time. So that only is going to give me return on investment. 
+
+ 
+57:37 
+So this is known as the bare metal virtualization and it's it's perfectly fine. Let's say you want to run a Windows virtual machine, that is also possible. So number of servers can be reduced and you have more advantage on return on investment and less capital expenditure here. So this technology introduced by VMware is known as the Type 1 virtualization. 
+
+ 
+58:05 
+It's short form, it's called the Vxn or we call it as the bare metal virtualization because the hypervisor is getting installed on top of the server or the bare metal itself. To talk about some of this hypervisors as you are already familiar, we have popular guy called VMware Esxi, right Xen Server, Xen project, Citrix as it's on. 
+
+ 
+58:35 
+Version of that Hyper V etc. Microsoft Hyper V bare metal. So GSXI or GSX was the first guy from VMware to come up with this kind of solution. This actually started a revolution as we have all seen and gone through that revolution that within years we have seen most of the bare metal data centers but converted into virtualized data centers. 
+
+ 
+59:03 
+Right, because it not only reduces the capital expenditure, it also reduces a lot of operational expenditure, right. So working on this kind of systems where I started my career, it was little bit scary. When you have a roll out, when you have a patch, if something goes wrong then it's it's a problem to maintain your RTO and RPO. But beautifully the virtual machine solved us to be more or made us to be more confident to work on. 
+
+ 
+59:32 
+That kind of administrative activities, right? So you have a lot of advantages in working on virtual machines specifically, we know that the virtual machine uses a V disk. So we are not talking about a big system here. Ideally, I have a virtual machine here. The disk of this particular operating system is a file on this particular hard drive, right? That actually gives me a lot of control. 
+
+ 
+59:59 
+Because if I want to take a snapshot it is possible. So if I want to create a recovery point, that is pretty much possible snapshot not just snapshot. If I want to create more and more Apache servers, I can create something or less VM images or in VM where temps we calls it as a templates right? So what is a template? 
+
+ 
+1:00:30 
+So let's say I want to launch more and more Apache and connect it with a load balancer to handle a burst traffic. So that's what the multi tier design says right? So if you have more traffic then you need to implement something called as horizontal scaling, like increase the number of compute unit in a serial way, add more and more machines. In that case if you think about a bare metal and you are planning to add. 
+
+ 
+1:00:56 
+So what I am telling here is in the in this design, if I'm using a physical machine right? So physical machine one is installed with Apache, but I have more traffic. So I am going to implement this design like I I'm going to add few more physical servers and bring up Apache and connect with the same database. You know powering on a physical server itself is going to take a long time. Then you need to install operating system, install application, configure the database connection file. A lot of things are there. 
+
+ 
+1:01:25 
+But here in virtual machine, if you have the V disk of the first machine, you can make it as a template or virtual machine image and within seconds you can bring back. Because there is no physical hardware boot up time. The hardware is already running with a hypervisor. Now suddenly you are launching another instance of a VM from the previous disk. So it becomes pretty fast. That means the boot up time when compared to. 
+
+ 
+1:01:53 
+The physical server boot up is pretty much fast right? Because there is no hardware boot up here, Just the virtual hardware is getting created, then the UEFI of that particular virtual machine, then the boot loader. Suddenly the programs are coming boot up time is pretty high. So virtual machine images helps us implement this multi tier strategy way better. 
+
+ 
+1:02:18 
+So initially when we are installing definitely we need to start from the ISO image. But there is no CD, DVD kind of boot up here. You can connect it with the virtual machine, install it into the virtual disk. Once the operating system is installed you can create a recovery point if you are not sure about what you are going to do. Also once the application is installed, you want to create clons of that particular machines, clons or replicas right? Then you can take a template and do it. 
+
+ 
+1:02:48 
+In a very easy way, you don't have to perform the partitioning of the disk and ISO extraction and installation again and again in case of virtual machines, a beautiful technology. So this is what the bare metal virtualization was. I'll put a break here. Any questions so far I know it's pretty basic, but any question none for me, none for me. 
+
+ 
+1:03:17 
+No course, yes, no course, Okay, great. So where is the container, right. So we are not into containers. We know that when VMware developed this tool, they didn't started with the type one or bare metal virtualization. Actually it was a advanced version of something or less the hosted virtualization or type 2 virtualization. This we have used a lot. 
+
+ 
+1:03:45 
+Type 2 Virtualization or Hosted virtualization. What is hosted virtualization? Let's say one of the developer working in that company is asking. See I I'm not getting access to the servers whenever I need. Can I replicate this environment into my laptop so that I can do my development by my own? Right. So what we will say it's OK you can you can migrate that image of the virtual machine to your laptop do one thing. 
+
+ 
+1:04:16 
+The laptop is installed with a Windows operating system. Let's assume that it's a Windows 7 or something. Then it has a Windows kernel. Right? Now do install and hypervisor. On top of this particular operating system you have it Hypervisor. 
+
+ 
+1:04:42 
+Running as a program. So initially it started like this. Eventually they understood that the resource consumption here is not optimal so they removed that underlying host operating system. So this guy is known as host operating system and optimized that of host operating system only for the hardware abstraction. Now you can migrate those virtual disk files here and run those application the laptop itself. 
+
+ 
+1:05:06 
+So you can test it within your laptop. So ideally your hardware is only having one operating system that is windows. But you can run a RHL, you can run a Ubuntu right? And that has its own kernels, so isolated environment. Then you have MySQL here with all its libraries and dependencies and Apache here. 
+
+ 
+1:05:36 
+Lips and bins. So it's pretty similar to this one. You have a vnic here, this is IP address one. You have another virtual Nic card here IP2. The disk of this will be sitting in, you know some VM directory here it's called a VMDK right? So vmdk 2 will be here. Pretty much similar but not used for a production grade environment because the resource consumption here is pretty optimal right? 
+
+ 
+1:06:04 
+So pretty heavy basically. So if this Apache program is running, it's actually talking to a kernel inside that virtual machine which has been given to hypervisor. A hypervisor is a program on Windows, it's again giving to a Windows kernel, and Windows kernel is talking to a laptop in a all the sense we can say a laptop hardware is completely abstracted by Windows and what is left after running windows is given to a hypervisor and that is given to. 
+
+ 
+1:06:34 
+The virtual machine. So performance wise it will be pretty, you know slow model when compared to a type 1 virtualization. But it is OK to have development environments inside your laptop. So this was known as the hosted virtualization. Eventually things got complicated in the industry, so we can say we had bare metal, then we had virtual machines. 
+
+ 
+1:07:03 
+With virtual machine advancement we created something or less SDDC software defined data centers. We'll talk about that area in the day three when we talk about orchestration. So on top of this, Esxi predominantly the V Center came into picture and the V sphere suit came into picture, right Then the network got virtualized. It's it's called the Software defined networking. Something like NSX storage got virtualized which is. 
+
+ 
+1:07:31 
+Something like vsan right on top of this, the cloud computing came into picture. That's how the cloud entered to the picture because a lot of operations in the data centers can be now controlled through softwares not through hardware, right. So cloud took an advantage of this technology and changed the model in which the data center is working. Things were pretty fast. I have seen a lot of bare metal solution got moved into. 
+
+ 
+1:07:58 
+Virtual machines which are running in on premise from on premise that what moved into private clouds and public clouds. But it was pretty easy. We just had to break the application into different different machines and VM migration. There was a lot of tools and stuff right? Once we settled down suddenly over a period of 2015 the manager is coming and asked us to migrate it into containers and this is not a easy game also. 
+
+ 
+1:08:26 
+So what is this? Containers. If things are pretty much proper in virtual machines, you have process isolation, you have, you know maximum resource utilization, you have faster boot up when compared to a hardware boot up, you have snapshot facilities for RTO RPO, you have virtual machine images from which you can easily clone. Then why we need to move it to containers, right? 
+
+ 
+1:08:53 
+Although I praised virtual machine a lot, there is a problem with the boot up time and the resource utilization. OK, what is the approximate boot up time that you have seen for a virtual machine? So let's say you have a Red Hat Enterprise Linux machine installed with MySQL. When you power on that virtual machine, how much time it is going to take? So this is this is how virtualization I have. 
+
+ 
+1:09:21 
+We are going to do it in AWS as well so don't worry. So let's say I have a Windows 11 here. If I power on this virtual machine, how much time it is going to take me to take to the Windows 11 graphical user interface? 15 to 30 seconds? Ohh if you're using a SSD, Premium IOPS SSD or something. 
+
+ 
+1:09:44 
+But ideally, I can say maybe it depends on the application, right? It may take up to 2 to 5 minutes, depending on the heavy natural of application, right? So if it's a small virtual machine, maybe some customized version of Linux with very bare minimal dependencies on it, it may boot up within one minute or 30 seconds as well. But let's say this MySQL kind of a Red Hat Enterprise Linux machine, it's going to take from 2 minutes to 5 minutes. 
+
+ 
+1:10:14 
+Why? Although the hardware is powered on, you have to boot the virtual hardware of this particular virtual machine. Start with the you know the UVFI or BIOS of that particular virtual machine. Then the boot loader is taken right booting device and the boot loader the grab boot loader or NT loader. Then comes the any tram file system Step by step it's bringing up services the any process is coming up. 
+
+ 
+1:10:40 
+Then comes all the SSH, NFS, ISC, this one, that one. Finally the MySQL D is coming up. It's loading and if you want to get that particular application, you need to wait approximately from 2 minutes to 5 minutes. This is not possible in today's world. So we talked about this multi tier design here. 
+
+ 
+1:11:05 
+This is not compatible with today's traffic. If you see today everything is connected to Internet right? And we don't have a clue who is going to hit on our servers at what time. Everyone has got its smartphone, edge devices, IoT devices. So the traffic to the systems cannot be predicted. It's called system of engagements. I will explain it why a container orchestrator is needed. 
+
+ 
+1:11:30 
+That means at any point of time I can expect a burst traffic coming to my system. So how I am going to handle that traffic? So you have three machines supplying the front end application and a big MySQL cluster behind me which is supplying the back end, right. So only way to handle that kind of a traffic is to add more and more virtual machines into this pool. So we have virtual machine images, the templates, we can do that. 
+
+ 
+1:11:57 
+But the problem is that by the time you add this machines, it will be around 2 minutes to 5 minutes for them to come up with that application and register with the load balancer. This is not permitted. So this process is heavily used in modern day designs. It's called a scale out right? You need to scale out and once we talk about software defined data senders and the cloud layer we. 
+
+ 
+1:12:23 
+We will see that this process is automatic, it's called auto scaling. Based on the metrics that you get from the existing virtual machines like a CPU metrics or memory metrics, you can trigger this process automatically. That's called a orchestration. So the idea here is that if you have a need for compute then you need to add more and more compute units. Our compute unit here is virtual machine. 
+
+ 
+1:12:46 
+And once that need is gone, if that additional traffic is gone, you will remove those machines as your hardware is virtualized if you release that machine. So you can use the hardware for some other machines, maybe for some other testing, so that you are not tightly coupling any application with the underlying hardware. That is called a scaling. We'll talk about this, and the process of increasing and decreasing it manually is known as the horizontal. 
+
+ 
+1:13:14 
+Scale. So horizontally I'm going to increase. If it's automatic, it's called the elasticity, elasticity of that cloud. Now here is where we had to think about something more advanced than virtual machines. 
+
+ 
+1:13:32 
+Why? Predominantly to reduce the boot up time into seconds. So the idea here should be like I need to design a solution where even if a lot of hits are happening to my load balancer, by the time the hit is happening my Apache is running. So within a second I'm getting more and more Apache and it's it's coming as a swarm of Apache and handling that traffic. If the traffic is gone this apaches are terminating so that other applications. 
+
+ 
+1:14:00 
+Can take the advantage of the below hardware. So the prime focus on moving to containers is speed. Speed in which your application boot up. So I can say there are only two aspects for containers. One is fast or speed plus performance. Right second is profit. 
+
+ 
+1:14:29 
+So performance and profit speed in the sense what if you load this application within a second? You are getting this application. You are not waiting for the entire virtual machine to put up within a second. The process is up as and when you need request based compute, there is a request, your application is up. Second thing is profit. 
+
+ 
+1:14:51 
+Although we are telling that the virtual machine when compared to physical machine promotes something or less infrastructure reusability or maximum resource utilization. What is the meaning of that infra reusability? Because I'm not completely tightly coupling any operating system with the server. So I have a hypervisor here. Now let's say here I was running a dev environment say dev VM was running. 
+
+ 
+1:15:22 
+Now I'm not using it anymore. So temporarily I can shut it down and run a test VM here, right? So that way I'm able to reuse the infrastructure. That is a very good property as well because here it was not possible. That's where we discussed right? Say I want a test environment, if I want to run a Linux here, then I had to uninstall this windows and reinstall that. But one of the challenge there what we faced is. 
+
+ 
+1:15:51 
+Let's say this is a MySQL machine that I am having as per my estimation of this application, when I'm doing an application performance monitoring, I'm understanding that at its maximum peak, the MySQL is only consuming 2V CPUs and four gig of RAM. 
+
+ 
+1:16:14 
+But I'm estimating I'm monitoring the MySQL, how MySQL is doing, how much resource consumption it is happening or it is having. I'm observing that maximum MySQL application alone with its dependencies is only consuming 2V CPUs and 4GB because there is a maximum read and write that can happen to that application, right? So I want to save more infrastructure. 
+
+ 
+1:16:42 
+So if it is only consuming 2 Vcps and four Gbs, if I reduce the infrastructure capacity for that machine here, that is possible in a virtual machine. Let's say I have already assigned 4 Vcps and 8GB, then I can stop the machine. That's called a vertical scaling. I can stop the machine and reduce the CPU to two VCPN. For GB. It's very easy, right? So let's say I have one of the machines here. So I have already given 4 processes and 4GB, but I can click on that and. 
+
+ 
+1:17:12 
+Reduce it to 2GB2 CPUs and 4GB whatever I I can modify that the machine should be off. That's called a vertical scale. But when I'm checking operating system, this guy is consuming 4V CPUs and 8GB when I'm only monitoring MySQL, I'm seeing my application which I want is only consuming 2V CPUs and 4GB, but I'm monitoring the operating system. This is saying that. 
+
+ 
+1:17:39 
+Operating system is completely consuming for V CPUs and 8GB. Based on that only I'm telling I'm using the hardware 100 percentage. Now what can be the reason for the operating system to show that it is it needs 4 vcpus and 8GB even if our application is only consuming 2 vcpus and 4GB. 
+
+ 
+1:18:09 
+Got the question? Yes, so Pete has replied, this always overhead, right? So this operating system is known as the guest operating system. The guest operating system has its own dedicated kernel and drivers, utilities, whatever is there. On top of that additional services like you have MySQL but you need SSH. 
+
+ 
+1:18:42 
+If you have a storage connected, you need ISC Cnfs. So other processes are also there, not just MySQL, right? All the supporting processes and the dedicated operating system is there. It's called a guest operating system. So the guest operating system needs its own guaranteed resources like 2 WE CPUs and 4GB. That's a fair ask, but for me it's a huge wastage. My application needs only two WE CPUs and 4GB. 
+
+ 
+1:19:09 
+But for running one single instance of that application in one virtual machine, I am additionally wasting 2 CPUs and 4GB. Think of 1000 servers. Then you will understand how much resource I am wasting. So Google was the first one to think about it in a production grade scenario. Especially for stateless applications like Apache. They thought like why do we need to waste this much hardware just to run a Apache process? Why I have to? 
+
+ 
+1:19:40 
+Create operating systems again and again, right? The hypervisor itself has a kernel, right? So if you see this model, we already have a kernel here. Then again a kernel inside the guest operating system. Host operating system has a kernel, so multiple kernel that's needed, right? So can we share this kernel? So that investigation of scalability and elasticity finally. 
+
+ 
+1:20:06 
+Came to one guy called the kernel kernel of the guest operating system. The kernel is causing the boot up time because when this virtual machine boots up then the kernel is loading up again. That's what is causing the boot up time in a virtual machine. Second, the maximum resource utilization, the kernel needs its own dedicated resources. The guest operating system needs its own dedicated resources which is a wastage from my application standpoint. 
+
+ 
+1:20:36 
+Maybe from infrastructure standpoint I would say how you are going to run a MySQL without a kernel. You need to create an isolated process space for that. But what if we can share the kernel from the underlying post operating system. That kind of a virtualization is known as operating system level virtualization, popularly known as the containerization, the salts that boot up time issue. 
+
+ 
+1:21:06 
+OS level virtualization, we don't call it that way. It's called the containerization. OK. So we'll get into that. We are one and half. We have passed the, yeah, we are. We are at about to finish our 1 1/2 hours. 
+
+ 
+1:21:31 
+Before we enter to containerization, is there any doubts till this point before we take a 15 minutes break? No, no. Okay. Is it clear? Am I going too slow? No, that's pretty good. No, no. Great. Fantastic. So please take a 15 minutes coffee break. We'll be back as containerization is a new topic. 
+
+ 
+1:22:01 
+It's better to start. OK. Thank you. So please take 10 minutes coffee break. We'll keep a timer here. We'll see you after the break. Thank you. 
+
+ 
+1:37:37 
+Hi team, I'm back. Hello, please. Hello, Hello. Hello, Hello, Hello. If you're back please give me a confirmation on the chat box and just back here or something so that we can take a queue, cut tenants if someone is not there. 
+
+ 
+1:38:04 
+OK. We have quick response. Thank you. Great. We have the Quorum. Thank you so much for acknowledging. Great, fantastic. So, so far what we discussed is bare metal is not going to solve all the challenges that we have in the modernized application world. 
+
+ 
+1:38:32 
+Boot up time. Ideally we can say this going to. So let's say you you have a patch and you need to reboot the operating system here. Then if you reboot that particular physical server, it's going to take a long time right? So maybe 5 to 10 minutes for the server to boot up, then operating system, then application virtual machine solved that by avoiding the server restart again because the physical server is already there. 
+
+ 
+1:38:58 
+It's in the running mode and you are only rebooting the virtual hardware and operating system. So that can be reduced into 3 to 2 to 5 minutes. But that is also not compatible and process isolation wise. Virtual machines act as single unit. So if you place different applications into different virtual machines we have better process isolation, better patching capabilities and stuff like that. What we have observed is. 
+
+ 
+1:39:26 
+A guest operating system or a fully fledged guest operating system is causing too much resource utilization concerns as well as the boot up time concern. So we are analyzing is it possible to share the Linux kernel from the underlying. So we're first we are going to only talk about the Linux applications, then we will also see how Windows is doing the equivalent method right? So instead of having multiple kernels inside multiple virtual machines. 
+
+ 
+1:39:55 
+Can we share a kernel from a central place and solve this kind of challenges? So I can say containerization is pretty much similar to type 2 virtualization or hosted virtualization where you have a host operating system and you have hypervisor softwares. We know that in this case we have Oracle VirtualBox is one of the popular software VMware Workstation, VMware Fusion. 
+
+ 
+1:40:23 
+Right. And Microsoft itself gives you the Hyper V in Windows. So this kind of softwares. But here also the same problem is that you have the host operating system kernel, then each guest operating system has its own kernel. So we want to avoid that this can be easily avoided. Let's focus on Linux containers first, then we'll talk about Windows containers, how it is possible. So let's assume you have a hardware, this can be a laptop. 
+
+ 
+1:40:52 
+This can be a server, desktop, whatever it is. The first thing you need to do if you want to start using containers is that you need to have a host operating system, host voice. This has to be any flavor of Linux. It can be any flavor of Linux. It can be Red Hat Enterprise Linux. 
+
+ 
+1:41:19 
+Right, it can be bundle Linux. These are few flavors that we will see in the server, World Souse, Enterprise Linux, Amazon, Oracle, whatever it is. Main point here is that the host operating system should hold a compatible Linux kernel. So that's the advantage of using Linux where everyone uses same kernel provided by the Linux foundation and Linux towards. So there is one kernel on the host operating system. 
+
+ 
+1:41:49 
+Now instead of installing an hypervisor, you will go and install an operating system level virtualization software which we generally call as the Container Runtime Engine. What is this? This is just a virtualization software, but this works in a very different way. Container Runtime Engine and the popular guys in this world. 
+
+ 
+1:42:20 
+One of the popular container runtime software is known as the Docker Engine. OK, then there are plenty of them. So there is something called as Rocket, there is something called as Pod Man, there is Cryo Container D, etc. We'll talk about this once you get a idea of Docker. 
+
+ 
+1:42:48 
+So we are not going to deep dive into this. We'll just learn Docker today how to use a Docker engine. So just like if you if you want to practice VMware Workstation, you need to know how to mount an ISO image to this particular virtual disk. Where is the disk file located? So if you see. 
+
+ 
+1:43:08 
+That is, file for this particular virtual machine is located here. Virtual disk files are there, the configuration files and other stuff, right? Likewise, we will play with containers. We will see how exactly we can launch applications and operating system via containers. So we'll focus on Docker, because Docker was the one who made it so popular and it's the pretty easiest solution to get started with containers. 
+
+ 
+1:43:37 
+Now, although it's not the proper definition of containers, I can say so remember this is not the proper definition of containers. I can say if you have a container runtime engine running on top of this host operating system, you can launch your applications on top of this machine without a kernel and guest operating system inside them. 
+
+ 
+1:44:04 
+That means the same application stack that we were talking about, which is MySQL, but we know that there will be certain dependencies of libraries and binaries. Then in a virtual machine world, we had a guest operating system and kernel there. Here we will not have that. Instead that facilities will be shared from the underlying Linux kernel. OK, likewise Apache. I have Apache here. 
+
+ 
+1:44:33 
+And all the dependencies of Apache. But there is no guest operating system and kernel. So what is that? No proper guest operating system. If you remove guest operating system, you will have faster boot up. That's what we investigated. The container boots up within milliseconds to seconds. 
+
+ 
+1:45:03 
+Not in minutes. The boot up is in seconds talking about the resource utilization. So in our example I told that you know, in my application performance monitoring I'm seeing that MySQL is only consuming 2V CPUs and 4GB right for this container here. So this is container one, it's not a VM. 
+
+ 
+1:45:33 
+I don't have to allocate an operating system component. If MySQL is going to consume only two vcpus and four gig of RAM, I will only allocate that much. I will not allocate 4 vcpus and eight gig of RAM because there is no guest operating system. Now what if the Apache is not even consuming 1 VCP? It's only consuming half vcpu. I can be granular here I would say. 
+
+ 
+1:46:02 
+This is only consuming 500 milli core of CPU. That means half V CPU. I can go with milli cores of allocation milli core in the sense I will take one core divided by 1000 then that's the milli core. That much granular right? I can also say only 600 maybe bytes of RAM, so I don't have to go with integers here. It's totally flexible. I can go to that much granular level. 
+
+ 
+1:46:32 
+So boot up time is faster, resource utilization is optimal. I am going to allocate only what is needed for that application. There is no overhead for an underlying operating system. So that is what the idea behind containers. Although the definition of containers or the term container relates to something else, it's related to shop software shipping. 
+
+ 
+1:47:00 
+Right, agility in delivering the software from a development environment to you know test environment and prod environment et cetera. But for infrastructure people, I would say it's a great starting point to understand what is the difference. Now there can be a problem, right. So it's mostly the design is pretty much similar like you have a virtual network interface card for the container and IP address for the container. So it's looks similar to the you know virtual machine design. 
+
+ 
+1:47:30 
+But the question here is like if I want to configure this Apache or I want to upgrade this Apache, I should get a shell in virtual machine we were having protocols like SSH and we were entering to the shell of the machine and doing all the patching and other stuff right? If there is no operating system, how am I going to get that kind of environment. For example in our example the Apache was using a Ubuntu. 
+
+ 
+1:47:56 
+Based environment, right? So you know Ubuntu Linux comes up with a package manager called app. Here we were using something like Red Hat which comes up with a package manager called Yum. So this environments were different. So if you want to install something you will say Yum installed in Red Hat and the other one is app installed. That's a Debian based distribution. So how am I going to control this application if I don't have a operating system environment? 
+
+ 
+1:48:25 
+Inside that. So what the container will do is just like we had ISO images in the bare metal world and in the initial stage of virtualization then we had the VM images where we have the snapshotted virtual machine disk. Right here there is something called as container image. The container image is so lightweight it gives you. 
+
+ 
+1:48:54 
+A OS environment, so basically all the binaries of this operating system without a kernel. So OS binaries will be given but no kernel. So kernel is not present kernel it is sharing from the underlying host operating system regardless of what flavor of Linux it is. It just checks whether a container runtime is running on on top of the host operating system. So. 
+
+ 
+1:49:23 
+A small level of base image with operating system binaries are given to you so that you will not feel like you are working in something else. You get the same experience as you are working in a physical server or virtual machine. So sometimes we cause this guys as a base image. So base image is which image from you are starting with. Just like ISO image of Ubuntu, ISO image of Red Hat. 
+
+ 
+1:49:51 
+ISO image of you know Windows or in virtual machine world we will say the OVF right open virtualization format kind of files. Here there are something called as container images. The base image, if it's a plain blank operating system, we call it as the base image operating system. And for all of the Linux flavors you will see there is a containerized version. OK, what is the speciality it only has? 
+
+ 
+1:50:19 
+The binaries of the operating system. For example if you compare IUSO image of Ubuntu with a container image and IUSO image comes up with a lot of other protocols like SSH, iSCSI, nfs, every package will be there. If you enable that during the installation that also will get installed. Here you will have only basic package managers, the shells right one again shell. 
+
+ 
+1:50:44 
+And other configuration files of Ubuntu. There is no other program apart from Apache that is supposed to be installed inside this container. One container is equal to 1 application. There will not be by default SSH or NFS unless you ask to install that. So this tremendously reduces the size of that compute unit previously in virtual machine world. 
+
+ 
+1:51:09 
+We can say, let's suppose it's the Send Toys operating system, which is a fork of Red Hat ISO image, maybe around 4.7 GB a virtual machine image when extracted, maybe around 6GB or 8GB. A container image comes up with 300, maybe megabytes, but you get the same functionality, right? Likewise Ubuntu. 
+
+ 
+1:51:35 
+The server edition ISO may be around 1.4 GB. When extracted, the virtual machine will be around 3 GB. Here you get it for maybe 80 megabytes. There are operating system images which range less than 10 megabytes. Why? Because there is no other component. There is no kernel. There is no other services. 
+
+ 
+1:51:58 
+It's just a plain blank, minimal layer operating system. On top of that you can actually install whatever application you want. Not only that, you don't have to start from a operating system. Let's say you are not from Linux, but you want to explore applications. You don't have to always start from operating systems. You can directly start from the application itself. The vendors or the docker community will give you ready made applications. 
+
+ 
+1:52:27 
+Like Apache, right. So they will use an operating system, they'll be an operating system plus Apache program and give you a ready made image. Or maybe they will use another operating system called Alpine plus Apache program. So you will get it directly. So you or the developer doesn't have to see the complexity, install, configure, manage of that particular operating system and application. 
+
+ 
+1:52:55 
+For any softwares that you can think of today, there will be a ready made image. So Apache, MySQL, MongoDB, Redis, whatever you think is in a cloud native format right. So which are designed to run in cloud will have a ready made container image applicable. Let's say we are from or from the administration side we want to create our own images so we have all the base images for all the flowers as well. 
+
+ 
+1:53:23 
+So this is groundbreaking. You will get a MySQL app and running within a second which is a database application. You want more and more Apache containers to be created. It's possible. Auto scaling is instant scaling in case of containers right? It can handle any level of burst traffic happening to your system and from resource utilization wise. We have seen that previously when we were running it in a virtual machine, we were giving. 
+
+ 
+1:53:52 
+Around double capacity for that operating system consumption, right? So that much capacity is left on this machine. Because I'm not using the kernel has already given a dedicated capacity. Now I am not taking too much for my container. That means I can run double the number of containers approximately when compared to the virtual machine because I'm removing operating system. So likewise there are a lot of advantages for containers. 
+
+ 
+1:54:23 
+And primarily you just need to remember those two words, One is performance, right? So the speed is good and also resource consumption is less and 2nd is profit. How profit comes into that? I'm not using as much hardware, I have all the infrastructure, reusable facility of the virtual machine. I can turn off the container, use it for other container, bring it back when I need it. 
+
+ 
+1:54:51 
+Everything is possible but with less resource utilization. That means if I want to purchase 100 servers to run my and their application stack, I can reduce it to 50 servers and use it wisely. That's the advantage of containers. Now today I'm going to stop the theory little bit. We'll continue the discussion tomorrow because as I told this is a hands on. 
+
+ 
+1:55:15 
+Training. We will not spend too much time on theory based on your doubts. In the hands on exercises we will discuss based on that. Today we are going to talk about Docker container runtime. Docker was the first container runtime which made containers so popular right? The speciality of Docker I can say there is a site called hub.docker.com or Docker Hub. This docker hub is known as a container registry. 
+
+ 
+1:55:46 
+So what is a container registry? Container registry is a place from which you can take the container images directly. Now we know what is a container image. Container image is the starting point of container, right? It's a point in time snapshot of a container from which you can launch either operating systems or directly applications. 
+
+ 
+1:56:10 
+So if you talk about the Linux world today we are only talking about Linux operating system. Images can be, you know, Debian based operating systems, this favorite of developers. Debian you have Ubuntu also you have you know, so they specialty of this operating system set. They use a package manager called apt or appget. If you want to install something you'll do certain exercises on this. 
+
+ 
+1:56:39 
+Then you have Red Hat based operating systems, You have RH El, Red Hat Enterprise Linux. It's not there in Docker Hub, but that's a container image for that Susse or Open Susse will be available Susse Enterprise Linux. Then you have Oracle, you have Centoise Rocky Linux, right? Amazon and HP has a high performance computing which is. 
+
+ 
+1:57:08 
+Tray, OS, et cetera. They uses predominantly a package management called EM PACKAGE MANAGED. So ideally this uses a executable file called the Deb dot Debian packaging format. Here it uses something called as rpm that had packaging format just like exe in Windows. Likewise, even Microsoft can be containerized. Microsoft has a particular image which is a containerized version of Server edition. It's called the Microsoft nano. 
+
+ 
+1:57:38 
+Nano Server, right. So we'll talk about Microsoft tomorrow. Don't get confused with Microsoft. And there are very lightweight images like Alpine BC Box. So the speciality is that this will be less than 10 MP in size, 10 megabyte. You are getting an operating system here it's around 60 megabytes in size. Here it is around 200 megabytes in size. Pretty much secure and other still. 
+
+ 
+1:58:06 
+So there are different operating system. Based on your choice you can select operating system. But you don't have to do that. A docker hub is something like your App Store in Apple or Microsoft Store or Android Play Store, where it's just a play store for your application, right? You want to work with server grade application, let's say Apache web server, we call it as httpd. It's it's called the HTTP Demo. 
+
+ 
+1:58:35 
+That's what is Apache. It's a combination of Debian operating system plus Apache prepackaged and given to you. So you don't have any configuration effort there. Likewise MySQL you can think of which is a SQL database, MongoDB which is not SQL database. You know WordPress which is again a Lam stack application, right? Linux, Apache, MySQL, PSP kind of application. 
+
+ 
+1:59:02 
+Anything that you can think of. So you will see hub.docker.com and explore section where you will see what all images are possible and you can start using that in a ready made. Mostly these are free but certain enterprise applications like applications and all you need to pay for license even Microsoft applications has some limitations but this is what we are going to cover. 
+
+ 
+1:59:29 
+Now we are in a hurry to practice Docker. So how we are going to practice Docker? So the question is can I install Docker on my laptop and practice? Yes. But we want to give you some heads up on how things are working in production so we will go in an alternative method. So all of you need to create a AWS account, right? So AWS we can think of something like a hosted solution. 
+
+ 
+1:59:56 
+They have huge data centers across the globe with all the cloud facilities so that we call as AWS regions. So this is the first lab that you are going to do after this lab, After you install docker, Ninad will introduce you to thehub.docker.com. You'll be understanding what our docker commands needs to be used to run containers, pull containers, commit containers and stuff like that. I'm just explaining the theory behind the first lab. 
+
+ 
+2:00:21 
+So AWS is a public cloud provider. They have regions across the globe. So you need to select a nearest region of AWS to you. So if you are in US, you have 4 regions. I can say you have N Virginia right? Or you have Ohio, California and Oregon and Canada Central right? 
+
+ 
+2:00:45 
+So what exactly you are doing? By selecting that region is you are connecting to your nearest data center of AWS where you will get AWS hardware. OK, now this AWS hardware is actually a virtualized hardware. That means you are getting virtual machine out of it. There will be a AWS hypervisor. 
+
+ 
+2:01:14 
+On top of it where you will be having maybe hypervisors like Zen or KVM kind of hypervisors. OK this can be HP boxes underneath but we will not see that right? So in the ARM world, the new scheme to control heat and all. I read somewhere that HP is heavily shipping hardwares to AWS. 
+
+ 
+2:01:41 
+To their data senders, right. So on base process this is going to be X86 traditional 64 Intel processors, C on processors is what we are going to take. Now this is there. So we'll go to the AWS console. AWS console is interface, it's a software defined data sender interface through which you can control the underlying virtualized hardware. 
+
+ 
+2:02:10 
+Where you will request for something called as a virtual machine, right? So in AWS it's called the EC2 machine Elastic Compute Cloud. So elasticity is the property that I told horizontal scalability. When it is done automatically the scale out and scaling is called Elastic Compute Cloud is just as you are, It's providing us compute resources right? So there are storage resources, database resources, other resources are also there. 
+
+ 
+2:02:38 
+Now you need to start from a virtual machine image that is in Amazon terms, it's called as AMI or Amazon Machine Image. So we talked about ISO images, virtual machine images and container images, right. So here we we want to take a virtual machine image because we need to create an operating system which is installed with a container runtime Docker. So we'll go with AMI. So we'll take a Ubuntu operating system here. 
+
+ 
+2:03:08 
+Ubuntu say popular Linux flavor, maybe Ubuntu 22.0 for operating system is what we are taking as a virtual machine image. And you need to tell how much computer source you need for this particular instance, how much CPU and memory. So that's called a instance type. We'll go with something called as T2 dot micro. So you get a Xeon processor with one V CPU and 1 gig of RAM. 
+
+ 
+2:03:38 
+Thing. Is that enough to practice Docker? Yeah, actually the disk that is getting connected is pretty good. It's a SSD disk. It's enough for us. A speciality of T2 micro is that it's covered under free tier of your usage. That means you can run this machine for 750 hours in a month. It can be one machine or you can launch five machines. 
+
+ 
+2:04:03 
+But total you can run the instance hours should not exceed 750 till that point it is you are running one machine you can run it throughout the month. So total will come to 7:50. You are not going to get charged. You are running 10 machines parallelly then that eventually by 1075 hours only you can run right? Likewise so that is instance type. 
+
+ 
+2:04:31 
+Now this is actually providing CPU and memory. So from the hardware, what about the storage? Definitely we know that it comes from a SAN, so and the box here is called the EBS Elastic Block Store. We will request for maybe a 8GB SSD, general purpose SSD so that the performance is good. So there is detailed lab guide and also Ninad is going to walk you through how to do that. 
+
+ 
+2:04:58 
+Once you create your instance, we can assume that something like this is going to happen. On top of this hypervisor you are going to get a machine. So this is our EC2 instance. This will be installed with Ubuntu operating system. Right now what is the speciality of Ubuntu operating system? This is a Linux based operating system. That means you have a Linux kernel here. 
+
+ 
+2:05:29 
+OK, now this much is there. Now you want to establish a connection to this machine. So your entry point will be the Virtual Network interface card here which in Amazon terms we calls it as the Elastic Network Interface. This network interface will be assigned with a private IP address from Amazon Private IP address. 
+
+ 
+2:05:54 
+From Amazon, from Amazon VPC, we'll talk about that in the April training little bit. What are VPC? What are subnets and how this IP address range can be controlled. But a private IP is only available within that network. So we'll also request for a publicly routable IP address, public IP. So there will be a Nat between this private IP associated with this network interface card and you have a public IP through which you will be able to talk to Internet. 
+
+ 
+2:06:23 
+What is our machine? Sorry, what is our mission here? We have an operating system with the Linux kernel. We want to install docker container runtime, so I need to enter to the shell of the machine to do that right? So we know that for Linux use a protocol called SSH to enter there secure shell protocol. So ideally we might be using tools like party or mobile external. 
+
+ 
+2:06:54 
+Kind of tool, but in a cloud environment it's pretty much easy. You you get a web-based terminal where you don't have to, you know use other tool, you can do it in the web terminal itself. Now this login actually works in a very different way, so you need a username. So the username will be Ubuntu. OK now there should be a password. 
+
+ 
+2:07:20 
+That's how we usually connect, but it works in a different way or more secure way I can say. So there will be a SSH public key inside this machine. This you will create when you are creating the machine and you will download something called as SSH private key. OK, so you have a private key that can be in a PEM format or? 
+
+ 
+2:07:48 
+PPK format. It's not needed when you are using a web terminal, but we will see in the coming trainings and all. We will understand why we need a PEM to be converted to PPK if you're using PATI kind of softwares. If if you are using PATI, you can download the PPK format which is known as the PATI private key format. If you're using say ohh, you can also use your PowerShell or your command prompt. In that case PEM file is good right? 
+
+ 
+2:08:18 
+So anyway, we'll be able to enter to the shell of that virtual machine using SSH protocol and what you will do is you will go to a website calledget.docker.com. It's the easiest way of installing a docker community edition. get.docker.com connects you with the actual download site which is called download.docker.com. 
+
+ 
+2:08:48 
+Theget.docker.com has a shell script which when get executed scans your operating system. It understands this based on Ubuntu Linux is version two 2.04 and there are certain package reposteries in which they have kept the package right. So it they do the new Privacy Guard connections, digital signature checks and finally install a Docker community edition for you. 
+
+ 
+2:09:16 
+The Docker community edition is free to use. There is Enterprise edition or as well. We are not using that. Now what happens when you run that shell script? You will use any commands like curl command to browse to that particular website and you get a docker engine installed here. Docker engine just like our VirtualBox or you know VMware workstation. You can talk to this engine. 
+
+ 
+2:09:44 
+Again, through an API can be through a graphical user interface if you're using that. But we are not going to use a graphical user interface at first. It's very important to understand the commands and parameters that you are giving. So we will go with a command line interface. A command line interface will also get installed in the same system and that is called the docker command, the docker CL line. OK, so the first exercise. 
+
+ 
+2:10:14 
+Helps you install Docker in a Linux based environment and to install it in Windows. It's pretty straightforward, just need to go to set for download Docker. You will get something on Docker desktop but if you have any other virtualization running in your system, it's going to stop the other virtualization. Something like a VirtualBox or VMware workstation is not going to work anymore if you install it. 
+
+ 
+2:10:40 
+If you have a personal laptop without any other virtualization software, definitely you can try. It's very easy. It's just a binary executable that you will get in Windows. Here you are using a shell script method, at least in this particular training. Now you have a machine running on a data center of Amazon installed with Docker. So you want to try the portable package nature of Docker, right? So I told that there is a site called hub.docker.com. 
+
+ 
+2:11:10 
+Hub.docker.com is where I will get my images Images in a particular format like image repo and version tag. This Ninad will explain you. So for example, let's say I want to run another send toys operating system inside this particular machine. I have to say send toys 7 or if I just say send toys. 
+
+ 
+2:11:39 
+It will take Centoys latest like this. There will be say Red Hat has Red Hat 6, Red Hat 7, Red Hat 8, Red Hat 9. Likewise there are version also for same operating system let's say for MySQL 5.8, MySQL 7, MySQL 8. Something like that right? So versions also will be there. Now you have your container images in hub.docker.com. You have a machine installed with docker with Internet connectivity in AWS. 
+
+ 
+2:12:08 
+So how are you going to take this particular images into your system? What are the commands, the docker client commands that you need to play? What is docker pull? What is docker container create docker container run. This kind of commands is what going to you are going to practice. So before I stop my session I can say what docker exactly. 
+
+ 
+2:12:34 
+Done to the development world or to the delivery rights, continuous delivery of application, continuous deployment of application, it solved a classic puzzle that we were having in the industry regarding configuration drift. So if you remember initially the software will get tested in a dev environment. In our example also we had that. 
+
+ 
+2:13:02 
+Scenario right? So first we will create a dev environment, then test, then let's say prod. So the dev environments usually will be mostly based on Debian or Ubuntu because it's fabric of the developers. It's very easy to configure that. Now you have sent toys in test because it should be a clone of prod and the prod. Let's assume that it's in RHL. So if you are not installing docker. 
+
+ 
+2:13:30 
+Configuration management becomes very hard here because you want to install Apache. Here you have to say apt install Apache. OK so this is development environment and the configuration file goes into slash etc Apache to something like that. The same command here changes to ym install httpd and the configuration goes into slash etc. 
+
+ 
+2:13:57 
+Httpd then httpd.com like that although the commands will be same here. Here comes something called as SC Linux security enhance Linux and now the developer will test everything in the dev box when it has been transferred to the tester and the steps are shared, these are not same right? So there needs a Linux expertise to understand that equivalent command in send send OS this em and. 
+
+ 
+2:14:27 
+These are the configuration files that I need to tester, is not a Linux expert and again the Linux admin needs to come coming to the prod. Then again security related concerns that happen. So even if the developers are writing code faster, the transfer of software from one environment to other environment was taking too much of time thereby having a problem in shorter time to market. Now what will be today's scenario Docker. 
+
+ 
+2:14:55 
+Is a universal package manager, so you'll learn a command called docker run. So you have dev environment in Ubuntu, sendos in test and rhgl in production. Everywhere you will install docker and there is a shell script for that, right? So docker engine is installed here also docker you want to run it. There is only one command docker run minus B -, B the port number you want. 
+
+ 
+2:15:23 
+And the image name HTTP, the command remains same here, same here, same here. Doesn't matter what underlying operating system you are using. It not just Linux operating systems, it can be Windows or even Mac operating systems. OK, So what is docker? Docker is a universal package manager. You don't have to know what is the configuration for a particular. 
+
+ 
+2:15:49 
+Operating system. You just need to learn docker. You can run your application anywhere not just in any flavor of Linux in Windows and Mac as well. So the ICM install, configure, manage, effort is completely taken care with the help of Docker. Now we have agility in transferring software because if it is running on your dev box, definitely it will run on your test box because a docker container image is. 
+
+ 
+2:16:17 
+Having all its dependencies packaged to that image itself, there is no dependency on the underlying operating system. So if someone asks you what is the difference between the hypervisors and the containers or container runtimes, you can say container is actually abstracting the underlying operating system. Underlying operating system in the sense it doesn't matter whether it is running in any flavor of Linux. 
+
+ 
+2:16:43 
+Mac or Windows your application works the same. It doesn't checks what is the underlying operating system. It checks is there a compatible version of kernel. Now how the windows and Mac is going to give you kernel I will explain tomorrow. But we know that for all the Linux distribution there will be a compatible Linux kernel underneath right? 
+
+ 
+2:17:05 
+Docker or container runtime is abstracting the underlying operating system what is getting abstracted? The application is getting abstracted from the underlying operating system. Whereas the virtualization was abstracting the underlying hardware from your operating system. OK, so it it was decoupling the operating system from the underlying hardware. So there are different use cases. 
+
+ 
+2:17:32 
+It doesn't matter whether you are running a container inside a virtual machine or you are directly running in on top of a bare metal with a host operating system. OK, there are certain use cases where you need to use a host operating system directly if you are using a virtual machine and inside virtual machine if you are using containers also, that is fine. So this can be a physical machine or virtual machine. In our case we are using a virtual machine because it's very easy for us to launch and we don't have to. 
+
+ 
+2:17:59 
+Start installing from ISO image and stuff like that. OK, so today you will be learning all the lifecycle commands of docker after installing docker on your system. Is it clear? Any doubts before I wind up the theory for today? No, no. OK great. So. 
+
+ 
+2:18:34 
+Yeah, that's a small theory. You'll get the recording of this session tomorrow and if you want this whiteboard, so I will export it to PDFs and export into a common channel. So that will be the session from my end. I think I'm on time. We have taken over 2 1/2 hours, so the rest of the session will be continued by my colleague Ninad Sandre. He's a lead lead, SME subject matter expert in Kubernetes on. 
+
+ 
+2:19:03 
+Cloud that so he'll be walking you through the hands on exercises. Yes, definitely John. I'll export the whiteboards into PDF format and upload it to a Google Drive and share as the final link. Also you will get the recordings if you want to watch it again, right? So what you need to do is do the hands on exercises. You will have a lot of queries questions regarding that SO. 
+
+ 
+2:19:29 
+So we'll keep it into a parking lot and tomorrow we'll have similar discussion. We start with the recap and we solve all the doubts. Then we proceed to the advanced topic, how exactly the container was working, where was the abstraction, what are namespace control groups, etc. So we'll be deep diving little bit into containers once you see the basic commands. OK then. Thank you for your patience. Over to you Ninad to start with the lab #1 demonstration. 
+
+ 
+2:19:58 
+Yeah. Thank you. Thank you. Thank you. Thanks team. We'll see you tomorrow. Take care. Bye, bye. Thank you. Bye, bye you. Thanks. Thanks. Hey team. So let me share my screen. I hope all of you are able to access this material. Okay post material. Do we have any issue with this, anyone? Where do we get that again? 
+
+ 
+2:20:34 
+Okay okay so I have shared we have shared 1 documentation to how to access to the test prep. OK so we have shared one PDF here Are you able to see my screen? So this is the user guide right? So from here you can create an account OK and simply after creating account. 
+
+ 
+2:21:05 
+You will get logged into this dashboard right? Test pre cloud. So I have already created an account and Justice did a sign up and here you will find your post material right? So this is the prerequisite to for AWS account creation and this is the post material right? And above that you will get training recordings of this course. 
+
+ 
+2:21:36 
+OK you can try this. If you face any issue just let me know. OK we have shared the link also in the chat box. So using this links this sign up link you can do a sign up and justice to redeem the course you can click on above link and this is your redeem code. 
+
+ 
+2:22:06 
+So all we're doing right now is we're not doing the lab exercises yet. No, we are doing the lab exercise. Those who are not aware of this, I'm just telling, OK, but what? What? Where we starting with the lab? OK, so we will start with the lab over lab #1, OK, it's a installation, the first lab in which we have three tasks. The first task is. 
+
+ 
+2:22:32 
+To connect an EC2 instance, that means creating a virtual machine on AWS. OK, connect to the EC2 instance. This is our task #2, and in task #3, we will install docker on it, right? Right. But where are we getting that lab book? Yeah, that lab lock is available on this text script site here. I I I downloaded that book. Hang on a minute. 
+
+ 
+2:22:59 
+I have that that open and it doesn't seem to be what you're saying. OK Can you share your screen? Ohh, there it is. No, there it is. It's like page, page 10 of that doc. Yeah. OK. It was a ways down. I I was expecting the first couple of pages. That couple of pages we have a PPT kind of presentation slides. Yep. Yep. OK. 
+
+ 
+2:23:27 
+OK, maybe you will face some issue while copy and pasting the commands from that lab. OK, so we have created one CHEAT SHEET. OK and let me share that CHEAT SHEET as well. Log into AWS. Yes, so I have shared one CHEAT SHEET. OK, if you click on the CHEAT SHEET. 
+
+ 
+2:23:56 
+It will open docker essential day one. In that you will find all the commands you just need to copy and paste. If you face an issue sometimes when you copy from dock and if you paste in the terminal, maybe you will face some typographic error. OK, that's the reason we have created a separate CHEAT SHEET, right? You can use both. OK, that's your wish. Now let's move on. 
+
+ 
+2:24:25 
+OK, let let's log in to the AWS account. Just give me a moment to log in. I wanna make sure I'm just following the flow. Yeah, so we're watching you first and then we're gonna go off and do this on our own, correct? Ah, yes. All right. I will show you first the step by step and I will give you separate time to perform the lab. Don't worry about that. 
+
+ 
+2:25:09 
+Hey, Marcus, can I borrow your credit card, Sir? You ready for the account number, Sir? Yeah, post it and chat, Marcus could be worse. As a young man, I read my credit card number across a single sideband radio. You could have heard it on the skip in Australia renting an airplane. 
+
+ 
+2:25:44 
+Nice. That said, I'm I'm lagging behind. Could somebody repost that cloud, that link and the password? OK, let me do that. OK, so yeah, this is link to reading before. 
+
+ 
+2:26:13 
+Yes, this is the code. Those who are who haven't create account on AWS OK or not able to access the AWS account OK, I'll give you an alternative where you can practice docker OK for free that's also I'll give you no issue. OK. I hope we all are on the same page. 
+
+ 
+2:26:47 
+OK, so see I've already logged into my AWS account. This is my homepage right? So in this service here you can search for EC2 virtual service servers in the cloud, right? So click on EC2 in the left corner you will see lots of options available. Here you can click on instances because we want to create we want to run one instance. 
+
+ 
+2:27:16 
+Here you can see there is no instance currently running right? I mean you need to launch instance. So click on launch instance. OK, so it will open up configuration page. Now here I will give name to my instance. You can give any name. Let's say I will give docker demo. You can give any random name. OK after that we need to select an operating system for our virtual machine. So here I will use. 
+
+ 
+2:27:47 
+Virtual Machine, right? So after that we need to select AIM. That means Amazon Machine Image. That means version of our Ubuntu operating system. It's 22.04 by default. OK, Which is free tier eligible, right? That means this is for this image. AWS will not charge anything. So whatever the image you will see, you will see free tier eligible. It's a free of host. OK? 
+
+ 
+2:28:15 
+Amazon will not charge for this. So by default image is 22.04 we will select that one only. OK now here in the instance type you need to make sure that you are selected T2 micro which is again free tier image. If you are selecting other than this OK you will get a surprise bill. OK so to avoid that. 
+
+ 
+2:28:41 
+Just make sure it is a T2 micro. By default it is a T2 micro. But please make sure about this right now to get connected with our virtual machine. If you want to use a third party application like putti OK or you want to connect from your SSH terminal like Ubuntu operating system, we need to generate a key right Keep here that keep here. Here we need to select so if you have already created. 
+
+ 
+2:29:11 
+That key pair will get listed here. If it's not then you can click on create a new key pair right. You can give name to a key pair. Let's say here I will give name let's say Nina Docker. This is the name of my file Key pair file. OK In which format you want to download that you need to select in dot pem or dot ppk? 
+
+ 
+2:29:38 
+Right. If you want to use puti then you we need to download this in ppk. for Windows we will use. Suppose you are using puti application to connect then you can use dot ppk. If you want to use open SSH then you can go with report. I know you've done this a couple of times. I'm in this container training right now and they're assuming that you've already got. Sorry, can you repeat your question? 
+
+ 
+2:30:09 
+I think he didn't know he was not muted. Sorry Open my my my bad. Oh OK Yep so this is PPK for protein. So click on create keypad and see your file is downloaded here right now. The next thing is network setting. That means what kind of codes we need to open. 
+
+ 
+2:30:34 
+Right so here you can see by default SSH port is open that is I think on 2/02/22 our SSH port you can click on allow https and allow HTTP traffic also OK And if you want to open some another ports you can click on edit. Right after clicking on edit you will see some rules are created here. So the first rule is for SSH right? Which is. 
+
+ 
+2:31:04 
+For protocol TCP and port is 22. SSH port source type is anywhere and as I selected https and HTTP also. So for https 443 port is open and for HTTP port 80 is open. If you want to open some another ports or range, open the ports in particular range. So you can use custom TCP and that range you can mention here let's say 8080 to. 
+
+ 
+2:31:33 
+8085 this is optional. OK this is not listed in the documentation. Also this is optional if you want to try if you if you want to check your application on different different ports. So I suggest you to open some another ports. You can do this after creating instances. So no don't worry about that right And source type is anywhere right? That's it. Now here we need to select the storage. 
+
+ 
+2:32:02 
+So here I will go with. You can go with 8GB storage also you can go with the 10 GB storage also. And in the box you can see free tier eligible customers. That means we are free tier eligible customers can get up to 13 GB Elastic Block Store General Purpose SSD. That means for this particular virtual machine up to 13 GB. I can configure above 13 GB. It is chargeable and in the below or in the. 
+
+ 
+2:32:31 
+Right corner you will see the summary tab right. So in the summary I am creating one instance using operating system open to two 2.04 with machine type as in T2 micro. I have created some network rules that is my security group rule right? And I have configured storage as in 10 G right and that's it. OK now you can click on launch instance. 
+
+ 
+2:33:04 
+OK, so see successfully initiates launch of instance right? So instance is created. You can click on View all instance or you can click on this and it will show you your instance. Now currently my instance is in pending state right? It will take some time. 
+
+ 
+2:33:31 
+Now in my instance is in running state. OK, any questions so far? This is our task number one in lab #1. Do you have any questions? Looks pretty clear if I was able to do it. OK, so I'll give you time for this, OK. 
+
+ 
+2:34:01 
+I'll give you 10 minutes to perform this lab. OK. I'll put timer on if you face any issue, just you can call me anytime. 
+
+ 
+2:37:21 
+ 
+
+ 
+2:38:05 
+So what was the key pair name again? Right, we're using hey, you can give any random key pair name. So in the notes it says use KLPS- KP. No, no that is not lab one. Okay. 
+
+ 
+2:38:38 
+In the lab one we have given the key pair name something different. So day of docker KP. Are you able to see the scheme? Yeah this is docker KP but you can give any rank. This is not needed that you will give the same. This is just for an example purpose. So I think you are all have #8. 
+
+ 
+2:39:19 
+It will start from, I think, I think page #10, right. Right. I'm sorry, say again, it's, it's on page #10. The lab one will start from page #10. OK, got it. Yeah. 
+
+ 
+2:39:44 
+So looking at my instance of docker, it's running but I get no status check reports. OK, it will take some time for me, yeah for me it's running, status check is not showing. So you can quickly refresh your page and you will get the status check. You can do refresh from here or. 
+
+ 
+2:40:19 
+You can't refresh from your browser anything. Hmm. What about now? Mine says initializing. Yeah, yeah, it will take some time. 
+
+ 
+2:41:14 
+Fast #2. Connecting to the instance using SSH. I don't see a connect anywhere. Yeah, I missed it. It's a a orange connect button at the top. You have to select your instance though to see it. Yes. Yeah, I don't. It will get a connect option. Ohh, come on Jim, it's right there, right in the middle of the page, very top. 
+
+ 
+2:41:44 
+See where it says launch instance 3 over no task #2 connect? 
+
+ 
+2:42:18 
+Ohh. Are we supposed to keep going or are we supposed to wait, wait, wait. OK, yeah, I'll show you task #2 and task #3 and then again, I'll give you some time. Yeah, that Kevin Ferguson dude, he's he's such a go getter. Yeah, to wait for us, Kevin. 
+
+ 
+2:42:58 
+I think I just messed up on on my key pair name. It's the only thing when I launch my instance I need to name it anything dash docker or dot docker and you can do it OK yeah says select key pair required. Alright, let's go with apk. 
+
+ 
+2:43:32 
+I don't like that. Nope. Oh, greater than key pair. What? I say Perm got that? Got that? 
+
+ 
+2:44:10 
+Finally. OK, it's downloaded. Yes, it's pending. So it's it's coming. OK, OK, it's it's running now. Thanks. OK Yep. So I hope my screen is visible now. You can see my instance is created and the state of instance is running. OK. It will take some time to do some health checks. OK, so your AWS will do some health checks on your instance whether your instance is. 
+
+ 
+2:44:49 
+Perfectly running or not OK and then you will get two health checks passed right? Then we can we are able to connect to the instance right? So we have two options we can use boot tlso OK and here after selecting instance you can use cloud shell to connect to the instance. So just click on connect. 
+
+ 
+2:45:12 
+Go down here. So this is your instance. Type your public IP and the default username for Ubuntu is Ubuntu and you can click on connect so it will open a new tab. OK that means a new terminal and it will get connected to your instance like this right? This is one way. OK let me show you with the right. 
+
+ 
+2:45:40 
+So here I will open a T application. So here I need to paste the public IP of my instance. So this is the public IP I will copy. I will paste in the post name or IP address right? 
+
+ 
+2:46:01 
+I want to connect to out #22 SSH right and here I will go to SSH authentication using private key. That private key I need to select here so I will click on browse and the downloaded key ppk that is Nina docker. I have given my key pair name as Nina Docker so I will select that click on open and if you want to do some. 
+
+ 
+2:46:30 
+Changes in the font that also you can do. Click on OK and open accept, login as an default user, open and that's it. I got connected to the instance through put right after that. 
+
+ 
+2:46:55 
+You can set up your host name if you want. OK If you don't want to see the private IP here and you want to set a host name you can run command sudo host name cdl set host name docker and after clicking on bash that will get updated. Now you went to add the rate dock right now after that. 
+
+ 
+2:47:22 
+I will become a root user using pseudo su, right? Then let's update the package manager apt update- Y by default the curl is presented here. So you can skip this tape also because that we are doing just to install curl right? So this is the command to install curl. 
+
+ 
+2:47:55 
+Yep, now we need to install docker right? So here if you go to the official documentation OK so on docker documentation OK so here if you select installation or if you on if you go to the go to the Google and if you search for docker install. 
+
+ 
+2:48:22 
+Just need to select an operating system on which you want to install docker. Let's say docker on Linux, Mac or Windows or the different distribution of Linux operating system sent to as Deb and Fedora. So now if I select Ubuntu here they have given step by step description to install docker on that. OK and they have created one script also that script we will get on. 
+
+ 
+2:48:50 
+Site called gate docker.com right? So if you go here you will see the script is here. So we can download this script and we can run this script so it will automatically install docker on your system right? So for that we have given this command curl if the screen curl SSL. 
+
+ 
+2:49:23 
+Httpsgatedocker.com pysh that means run that particular script and hit enter. It will start running those script and after some time it will come up with installation of dock. 
+
+ 
+2:49:58 
+So I ran the service docker status. It didn't give me my prompt back. OK Are you getting some error? It didn't give me my prompt back. For me it's showing running. Let me OK, let me complete this and I will ask you to share the screen. 
+
+ 
+2:50:26 
+So what'd you do? Control C? Yeah, Control C, we'll see. Control C OK, what is sure? OK, Yep. Now. Yeah, for me it's running. Now let's add our build go into the docker group. OK, so we'll not face the permission error issue. And now we can check the docker version. So docker version 23.01. 
+
+ 
+2:51:00 
+Right you can if you want to check in detail, you can do docker version without-- So this is your client version and this is your server version. So whenever we install docker the two programs will get installed. One is a client and one is a server. Through a command we are talking with the client. OK client will talk to server. 
+
+ 
+2:51:30 
+So whatever the instruction we are giving, we are giving to the client and client will communicate that instruction. Server and server will take appropriate action on that. OK so this is how to install docker. Now you can install docker. If you face any issue just let me know. 
+
+ 
+2:51:57 
+And not wanting to get this wrong, I had to go. I had didn't even have an AWS account set up so it's taking me I'm a little bit behind everybody. But when you get to the network settings it's not clear do we It gives a warning when you allow SSH traffic from anywhere as selected. It pops up and shows a warning. However that's what's shown is selected in the documentation that is correct. 
+
+ 
+2:52:26 
+The yes whatever we have shown in the documentation, that is correct. OK, so I should ignore the security yes rules warning. Yes. Isn't there a couple of more options you have to make there? 
+
+ 
+2:52:41 
+Yeah, it tells you to allow https traffic right from and and HTTP. I I've selected those but I just it it doesn't have an explicit stack step saying to enable allow SSH traffic from anywhere. It does show it selected in the thing. I just wanna make sure that was correct because it pops up an error message. A warning. Yeah let me see. 
+
+ 
+2:53:11 
+Here if I click on I'm not able to see any warning here. Right below there rules with the source of. You can ignore, right? OK so yeah, that is by default warning. Yeah again I'll give you 10 minutes. 
+
+ 
+2:53:57 
+I got a quick question. My my instance did finally got the two or two pass check passed and just wanna make sure I'm keeping up at least close with the class. What was the next thing we have to do Launch did launch entrance I mean launch instance and so I got two or two pass so launch it now no. So after you you can click on view all instance right So here you can see. 
+
+ 
+2:54:23 
+Two check passes. Clear. OK, now just select the instance and click on Connect. OK. Connect. All right. My Connect button is not highlighted. What up? I got you to connect. I had to check it first. I got you. I got you. I got you. What's going on, John? Connect. I got you. I'm with you. I had to select it first. That would probably help. It's connecting establishment. OK. 
+
+ 
+2:54:53 
+A list of blah blah blah list of available updates in more than a week. I'm going to OK, and then we can use your CHEAT SHEET from there once we get into Ubuntu. OK, yes, we're going to run this task. 3 commands right, Right, Right. Find my CHEAT SHEET first. 
+
+ 
+2:55:29 
+Over here. 
+
+ 
+2:56:05 
+Can you slide your CHEAT SHEET down again one more time? Finish this back in teams. Now while we work on this lab, I was told that Docker has slowly been phased out and other and container D is slowly but surely becoming the standard. Is that set true container ID? 
+
+ 
+2:56:33 
+Container D is slowly becoming the new standard over Docker. Yes, in the updated version of Incuben it is version one above version 1.24, right? Yeah. Container D that we will discuss tomorrow. Like why exactly they have they are using Container D as a container runtime. Okay. Excellent. Yeah? Yes. 
+
+ 
+2:57:05 
+No. Best job. CHEAT SHEET again. This is OK. I see. I see. Yeah. Thank you. I see now. Thanks. Got it. Thank you, Sir. 
+
+ 
+2:58:59 
+ 
+
+ 
+3:00:14 
+So with the servers service docker status that we you have us run there, do we just escape out of that output there to run the next command? Yes you can. You can use control C to come out from that. 
+
+ 
+3:00:44 
+You can run docker version command next. 
+
+ 
+3:03:10 
+I did the app to install curl, dash Y. It got up to 80, it's up to 89% but it's just kind of stuck there and it went back to the prompt but I can't do anything. Is that can you share your screen? Yeah, have presenter access, Can you check? Yeah. 
+
+ 
+3:03:39 
+It's visiting. Yes, OK can click on control C or close this tab and reconnect. OK, All right. Yeah, that's that's. I was trying to get it in Putty but it didn't. It doesn't seem to like the the pem. 
+
+ 
+3:04:16 
+I got it to work in putty. Yeah yeah and if you have to use the pem you can use moba. You just gotta download the path. I was able to use moba. Ohh my stream is also good. I use putty key generator to generate the new key and now it works OK that's good. 
+
+ 
+3:04:45 
+OK now for those who are not ready with AWS account yet. OK, let me give you 1 alternative right. So just open a new tab and search for Killer Coda. OK, so here you will get an playground for a docker. OK, so go for Killer Coda, click on playgrounds then. 
+
+ 
+3:05:11 
+Will give you some options of playground. You can select CKA or CKD or CKS. Anyone of this CK stand for Certified Kubernetes Administrator, CKD stand for Certified Kubernetes Application developer. This is playground for actually Kubernetes, but if you select a CKA, by default docker is installed on it, right? So see that's how within a second. 
+
+ 
+3:05:37 
+They will give you one new fresh environment and you will get connected to an instance and if you run command docker version here you will see docker is already installed here and you can perform all the labs here related to the docker OK not for the Kubernetes or the Kubernetes, we are going to set up our own cluster on AWS OK but for the day if. 
+
+ 
+3:06:05 
+You have created account on today only and if it's not working you can use this alternate. OK let me give you the link in the chat box. This totally free playground is totally free. You can for login you can use your personal ID. I'll say this, don't use your official ID maybe you will face some. 
+
+ 
+3:06:30 
+Firewall issue. So here you can see I have already logged in so I got connected to the instance. But let's let me show you if it's not logged in, let me log out and let me go step by step again. So I have visited this site. I have clicked on playgrounds, then here I have selected CKA. 
+
+ 
+3:07:00 
+And see, is asking me for login, right? So there are four options. You can you can log in using GitHub and GitLab, Google or Gmail. OK, let's select Gmail. This is my Gmail personal account. So I will select any personal account and that's it. It will do authentication. That's it. You will get connected to your instance quickly. It's a new Bento instance only. 
+
+ 
+3:07:30 
+On which docker is installed. Even you can increase the font size if you want. If you want to check the output of your application on local host OK that also you can do just click on traffic and ports and this is your instance one that is host one is your instance. So if you want to check local host 80 you can click here. If you want to check local host 8080 you can click here Other than that. 
+
+ 
+3:08:00 
+Custom ports you can write here and justice click on access. That's it. This is local host connection checker. This is a good website. You can practice for docker and Kubernetes as well and it's a totally free. Only. The disadvantage of this environment that this environment is valid only for 16 minute. OK after 16 minute. 
+
+ 
+3:08:27 
+You just need to refresh your page, OK? And then you will get a new environment because this is just for a practicing purpose. OK? We cannot place our applications here. OK, right. Yep. So this is all lab number one. I hope we all on the we all are on the same page. 
+
+ 
+3:08:56 
+I completed our lab one. We have installed our docker right. Now let's move on to the lab #2. OK, the basic commands. Right now the first command you can see docker run hello world right? What is what is the meaning of this command? Right. So now if I run this command, what is the meaning of this command? 
+
+ 
+3:09:21 
+So here I'm calling my agent that is a docker that means a client, right? So I'm calling my client docker that I run means I want to create a container, right? But for that I want to use image hello world. Right now this image is available on hub.docker.com. I go to thehub.docker.com. 
+
+ 
+3:09:50 
+Okay here you can create a simple account. You can create a account using the simple steps. OK if you are already create then click on sign in. OK and for for now you don't need to sign in. You can simply click on explorer or so. Don't need to sign in Yep so here if you click on explore. 
+
+ 
+3:10:16 
+OK, without doing signing that is. Also it will open all the images. So this is a repository in which you will find more than 10,00,000 prebuilt docker images are available OK with different different applications right? So here you can see the base images like Alpine, busy box, ngnx, open to Python OK and somewhere down here. 
+
+ 
+3:10:45 
+You will see hello world image right? So let's see what is this image. So hello world is an example of minimal dockerization right? So whoever the developer of this image, he have created this image just to print one message right? So whenever you run a container. 
+
+ 
+3:11:13 
+When you whenever you create a container from this image, it will simply print one message. OK, this message it will print right? And it will create a container right? So using this command will create a container OK but above here you can see one more command and that is a docker pull hello world right? So this command is used just to download this image into our. 
+
+ 
+3:11:42 
+Into our local image repository, right? So now here if I run command docker images, what is the meaning of this command docker images? That means show me the locally available images in on my post. So currently I don't have image available on my post right now. If I run this command docker pool hello world what will happen? 
+
+ 
+3:12:12 
+It will simply pull the image from hub.docker.com so see started pulling. Now if I run the same command again docker images now I can see hello world is presented here. Now here you can see there is one more option that is a well I I just finished creating my account on hub.docker.com which means I can now pay attention to how you do the pull but. 
+
+ 
+3:12:41 
+You just have to remember, not all of us have these accounts set up and it takes a second to do it. You got to authenticate the e-mail and everything. Yeah, it will do e-mail authentication, yes. But just for pulling, you don't need to create an account, OK? You can simply click on Explore. Yeah, you don't have to create an account. Yes. OK, let me show you by. 
+
+ 
+3:13:11 
+Sign out from here and if I go to thehub.docker.com you can simply click on explore here on top OK yeah and you will see hello world image here and still you can pull the image OK. It will not ask you your authentication. You only need to create account on hub.docker.com if you want to place your images to hub.docker.com. 
+
+ 
+3:13:42 
+Right. So see, I'll show you now. I'll do a sign. OK. Thanks for clarifying that. Yeah, yeah. See, after I sign up, I can see my repository here. Now see, inja Cloud 05 is my user ID and I have placed some of the images under my repos. 
+
+ 
+3:14:10 
+OK so yeah so back on hello world. OK so one more thing is there. If you see here if I run this command docker images I can see hello world is present but with the tag latest. Now what is mean by this tag? So tag is nothing but it indicates the version of your image right? So if you go to if you open hello world image you can see tag option here. 
+
+ 
+3:14:39 
+If you click on this tag option you can see there are lots of tags are available. But now question is while while running this image while running this command see locker pull hello world. I didn't mention any tag here. OK still it's showing latest right? That's the that is the meaning if you're not mentioning any tag. 
+
+ 
+3:15:07 
+It will consider Docker will consider it as an latest. That means this is hidden, right? It is there if you are not mentioning it is there. If you are mentioning a particular version that means it will pull that particular version only, right? So something like this. See let's say Linux. So here you will see docker pull. Hello world Colonel Linux. 
+
+ 
+3:15:37 
+So whatever you will write after the colon in the image will considered as an tag. OK, this is for creating its kind of version. So if I have created one image then I have updated that image, I can write it as an version two like that right? So now let's create our first container OK using command. 
+
+ 
+3:16:05 
+Docker run hello world right? See after running this command I'm able to see the message right? What is the message? This is the message hello from docker. This message shows that your installations appears to be working correctly and to generate this message docker took the following steps right? So now in this steps it's showing that our docker client is contacted to the docker daemon. 
+
+ 
+3:16:39 
+That means our server, or you can call it as an engine. Right after that, docker daemon pulled the hello world image from Docker Hub, right Then docker daemon created a new container from that image which runs the executable that produced the output which are currently ready, right? The docker daemon stream that output to the docker client which sent it. 
+
+ 
+3:17:08 
+To your terminal. So simple. It's explaining the architecture of docker right? But here it's showing that new container is created. Now where is that? How to check the container right? So to check the running container you can call your agent that is docker. Hey docker, I want to see the containers that means running processes so I can use PS command. 
+
+ 
+3:17:35 
+So docker PS PS stands for processes. So in the Linux also if you know PS is used to see the running processes right? So docker PS. Now here I can see there is no running container right now where is this container, right? So now to check all the containers you can run command docker PS-A. That means show all containers right now if you hit. 
+
+ 
+3:18:05 
+Enter. You can see one container is there. OK now here you can see this is the container ID. OK, this container is created from the image hello world. OK this is the command run on that particular container to start your application. That means this command is to make your image executable right now. 
+
+ 
+3:18:34 
+Created about a minute ago, but exited about a minute ago. That means this container is created and exited within a second. Why? Because the task of this container is just to print this message. And that's it. The task is done, your container will exit. OK, so now here we are using this container. So now we are not using containers as an operating system like Vms. 
+
+ 
+3:19:01 
+OK, we will use containers for two purposes. One is to perform a particular task or two to run a particular process continuously on it. Right? Let's say web server. I will create one container, I will put one web server application inside it. It will run continuously. I need to stop that web server manually then only the task is over right? Or I can give any task to this container. 
+
+ 
+3:19:32 
+Once the task is complete, it will exit automatically. OK, so whenever the primary process is ended, your container will get exited right? So the primary process on this container is just to print this message and that's it. So he just printed the message and exited. And from a single image you can create a multiple container so I can run this command. 
+
+ 
+3:20:02 
+So many times and it will print the message. So see I have run this command three times. Now if I do docker PS a I can see three containers are created and three containers are exited within a second only but from same image. Now here my container have two identities one is container ID. 
+
+ 
+3:20:28 
+Which is randomly generated by docker daemon. OK, and the 2nd is my container name. Here also it is given random name. Still talking. Sorry. Am I? Am I audible? Yes, I hear you. Yeah, we hear you. No, that was mine. Yes, I must have somehow muted you. 
+
+ 
+3:20:58 
+OK, OK, I thought for a long time. I'm just talking to no one. Yes, well I don't know how that could happen, but I got scared little. OK, no issues. OK, so our container have two identities, one is a container ID and this container ID we don't have a control. 
+
+ 
+3:21:26 
+OK, the docker randomly give any container ID, but we do have a control on the names right? We can decide a container name right? Currently while running the command we are not mentioning any name, so docker is randomly giving the names. OK but we have a control on this that we will see after some time, right? 
+
+ 
+3:21:54 
+Okay. Any questions so far I launched the docker and it's still saying initializing. It's been doing that for a very long time. Can you share your screen? Sure. One moment, please let me stop my screen. Do you have present tracks? Yeah. 
+
+ 
+3:22:25 
+So can you refresh your page? That was it. OK, thank you. I was trying to refresh and I couldn't figure out how to do that. OK, thanks. Yeah. OK. Now it's a lunch break time. OK. So take a lunch break for. 
+
+ 
+3:22:52 
+One hour. And after that, we'll come back and we'll continue. Right. OK then. Take a break. See you after the break. Bye. Bye. Enjoy your lunch. See you. Thank you. Thanks. Thank you. Mark, is you still there? Yes, Sir. I'm still here. 
+
+ 
+3:23:16 
+Hey, I might be dangerous man. I'm I'm up with the I'm up with the class. I might figure some things out. Today I got this. I used to be HPUX guy, so you know the the Linux is pretty easy for me to catch on with the commands. But just making sure I get the instructions. I might be a little dangerous with this kubernete stuff. We'll see. So far so good. 
+
+ 
+3:23:39 
+Oh yeah, yeah this this is the part I needed. I need the background of of how kubernative containers work because yeah, most I figured out. Yeah, I realize that as everyone makes it a a heck of a lot easier because they can do a lot of this work for you. Yeah, with special with the on the windows side they and they'll they'll have all that gooey stuff in there for you. But this is so far so good. Look you got John Lang in the class. I must be getting smarter. I'm in the class with you and John. 
+
+ 
+3:24:08 
+I don't know about John being in the class and you getting smarter. I'm like someone snuck him the invite. So he got in. Yeah, that's what he. Hey, John, I I felt important. I seen Marcus in the class. I was like, well, I'm moving up. Yeah, I know, Kevin. I know Kevin's smart. I don't know the rest of these gentlemen, but I know Kevin's smart, smart guy. You know what I'm saying? I was like, Marcus is I'm in the class with Marcus. 
+
+ 
+3:24:38 
+Y'all so I love it, you know. You know You know. You the man. Don't don't be trying to act shy because everybody don't know you. Don't Don't try to act like that. Me and y'all know you. Yeah, y'all. So, yeah, that's why it says we're full of it, right? Hey, we are we on lunch now? From one to two? Yes. I'm sorry. Sorry I took y'all 2 minutes. All right. All right, Jim. See you back at two later. All right? Yep. Yep. Thank you. On lunch break. Bye. Bye. I'll put timer on. 
+
+ 
+3:25:06 
+For your reference. 
